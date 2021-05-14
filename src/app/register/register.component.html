@@ -1,0 +1,78 @@
+<app-header></app-header>
+<div class="container">
+<div class="row justify-content-center bravo-login-form-page bravo-login-page">
+<div class="col-md-5">
+<div class="">
+<h4 class="form-title">Register</h4>
+<form class="form bravo-form-register" method="post" [formGroup]="registerForm" >
+<input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> <div class="row">
+<div class="col-lg-6 col-md-12">
+<div class="form-group" formControlName="fname">
+<input type="text" class="form-control" name="fname" autocomplete="off" placeholder="First Name">
+<!-- <i class="input-icon field-icon fa"><img src="assets/images/ico_fullname_signup.svg"></i> -->
+<div class="invalid-feedback error error-first_name alert alert-danger" *ngIf="isValidInput('fname')">
+    <div *ngIf="registerForm.controls['fname'].errors?.required">
+        Name is required.
+    </div>
+    <div *ngIf="registerForm.controls['fname'].errors?.minlength">
+        Name must contain atleast 3 characters.
+    </div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12">
+<div class="form-group">
+<input type="text" class="form-control" name="lname" formControlName="lname" autocomplete="off" placeholder="Last Name">
+<!-- <i class="input-icon field-icon fa"><img src="assets/images/ico_fullname_signup.svg"></i> -->
+<div class="invalid-feedback error error-last_name" *ngIf="isValidInput('lname')">
+    <div *ngIf="registerForm.controls['lname'].errors?.required">
+        Name is required.
+    </div>
+    <div *ngIf="registerForm.controls['lname'].errors?.minlength">
+        Name must contain atleast 3 characters.
+    </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="form-group">
+<input type="email" class="form-control" formControlName="email" autocomplete="off" placeholder="Email address">
+<!-- <i class="input-icon field-icon fa"><img src="assets/images/ico_email_login_form.svg"></i> -->
+<div class="invalid-feedback error error-email" *ngIf="isValidInput('email')">
+    <div *ngIf="registerForm.controls['email'].errors?.required">
+        Email is required.
+      </div>
+      <div *ngIf="registerForm.controls['email'].errors?.pattern">
+        Must be a valid email format.
+      </div>
+    </div>
+</div>
+<div class="form-group">
+<input type="password" class="form-control" name="password" autocomplete="off" placeholder="Password">
+<!-- <i class="input-icon field-icon fa"><img src="assets/images/ico_pass_login_form.svg"></i> -->
+<span class="invalid-feedback error error-password"></span>
+</div>
+<div class="form-group">
+<label for="term">
+<input id="term" type="checkbox" name="term" class="mr5">
+I have read and accept the <a href='#' target='_blank'>Terms and Privacy Policy</a>
+<span class="checkmark fcheckbox"></span>
+</label>
+<div><span class="invalid-feedback error error-term"></span></div>
+</div>
+<div class="error message-error invalid-feedback"></div>
+<div class="form-group">
+<button type="submit" class="btn btn-primary form-submit">
+Sign Up
+<span class="spinner-grow spinner-grow-sm icon-loading" role="status" aria-hidden="true"></span>
+</button>
+</div>
+<div class="c-grey f14 text-center">
+Already have an account?
+<a href="#" data-target="#login" data-toggle="modal">Log In</a>
+</div>
+</form> </div>
+</div>
+</div>
+</div>
+<app-footer></app-footer>

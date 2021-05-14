@@ -1,0 +1,788 @@
+<app-header></app-header>
+<section class="our-listing bgc-f7 pb30-991">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="row">
+<div class="col-lg-12">
+<div class="listing_sidebar dn db-991">
+<div class="sidebar_content_details style3">
+<div class="sidebar_listing_list style2 mobile_sytle_sidebar mb0">
+<div class="sidebar_advanced_search_widget">
+<h4 class="mb25">Advanced Search <a class="filter_closed_btn float-right"><small>Hide
+Filter</small> <span class="flaticon-close"></span></a></h4>
+<ul class="sasw_list style2 mb0">
+<form action="http://findhouse.bookingcore.org/property" class="form bravo_form" method="get">
+<li class="search_area">
+<div class="form-group">
+<input type="text" class="form-control" id="ServiceName" name="service_name" placeholder="Property Name" value="">
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="location_id" class="selectpicker w100 show-tick">
+<option value="0">Location</option>
+<option value="1">Paris</option>
+<option value="2">New York, United States</option>
+<option value="3">California</option>
+<option value="4">United States</option>
+<option value="5">Los Angeles</option>
+<option value="6">New Jersey</option>
+<option value="7">San Francisco</option>
+<option value="8">Virginia</option>
+<option value="9">Россия</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="category_id" class="selectpicker w100 show-tick">
+<option value="0">Property Category</option>
+<option value="1">Apartment</option>
+<option value="2">Condo</option>
+<option value="3">Family House</option>
+<option value="4">Modern Villa</option>
+<option value="5">Town House</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="category_id" class="selectpicker w100 show-tick">
+<option value="0">Property Type</option>
+<option value="1">For Buy</option>
+<option value="2">For Rent</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="bathroom" class="selectpicker w100 show-tick">
+<option value="0">Bathrooms</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="bedroom" class="selectpicker w100 show-tick">
+<option value="0">Bedrooms</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+ <option value="8">8</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="garage" class="selectpicker w100 show-tick">
+<option value="0">Garages</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</div>
+</div>
+</li> <li>
+<div class="small_dropdown2 property_select_price">
+<div id="prncgs2" class="btn dd_btn">
+<span>Price</span>
+<label for="exampleInputEmail2"><span class="dropdown-toggle"></span></label>
+</div>
+<div class="dd_content2 property_select_price--slider">
+<div class="pricing_acontent">
+<input type="text" name="price_range[0]" class="amount" placeholder="0">
+<input type="text" name="price_range[1]" class="amount2" placeholder="900.00">
+<input type="hidden" id="max_value" value="900.00">
+<div class="slider-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="year_built" class="selectpicker w100 show-tick">
+<option value="0">Year built</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+</select>
+</div>
+</div>
+</li> <div class="g-button-submit">
+<button class="btn btn-primary btn-search" type="submit">Search</button>
+</div>
+</form>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<div class="dn db-991">
+<div id="main2">
+<span id="open2" class="flaticon-filter-results-button filter_open_btn style3"> Show Filter</span>
+</div>
+</div>
+<div class="breadcrumb_content style2 mt30-767 mb30-767">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a routerLink="/index">Home</a></li>
+<li class="breadcrumb-item active text-thm" aria-current="page">List Property</li>
+</ol>
+<h2 class="breadcrumb_title">List Property</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-xl-4">
+<div class="sidebar_listing_list dn-991">
+<div class="sidebar_advanced_search_widget">
+<ul class="sasw_list mb0">
+<form action="http://findhouse.bookingcore.org/property" class="form bravo_form" method="get">
+ <li class="search_area">
+<div class="form-group">
+<input type="text" class="form-control" id="ServiceName" name="service_name" placeholder="Property Name" value="">
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="location_id" class="selectpicker w100 show-tick">
+<option value="0">Location</option>
+<option value="1">Paris</option>
+<option value="2">New York, United States</option>
+<option value="3">California</option>
+<option value="4">United States</option>
+<option value="5">Los Angeles</option>
+<option value="6">New Jersey</option>
+<option value="7">San Francisco</option>
+<option value="8">Virginia</option>
+<option value="9">Россия</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="category_id" class="selectpicker w100 show-tick">
+<option value="0">Property Category</option>
+<option value="1">Apartment</option>
+<option value="2">Condo</option>
+<option value="3">Family House</option>
+<option value="4">Modern Villa</option>
+<option value="5">Town House</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="property_type" class="selectpicker w100 show-tick">
+<option value="0">Property Type</option>
+<option value="1">For Buy</option>
+<option value="2">For Rent</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="bathroom" class="selectpicker w100 show-tick">
+<option value="0">Bathrooms</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</div>
+</div>
+</li>  <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="bedroom" class="selectpicker w100 show-tick">
+<option value="0">Bedrooms</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="garage" class="selectpicker w100 show-tick">
+<option value="0">Garages</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</div>
+</div>
+</li> <li>
+<div class="small_dropdown2 property_select_price">
+<div id="prncgs2" class="btn dd_btn">
+<span>Price</span>
+<label for="exampleInputEmail2"><span class="dropdown-toggle"></span></label>
+</div>
+<div class="dd_content2 property_select_price--slider">
+<div class="pricing_acontent">
+<input type="text" name="price_range[0]" class="amount" placeholder="0">
+<input type="text" name="price_range[1]" class="amount2" placeholder="900.00">
+<input type="hidden" id="max_value" value="900.00">
+<div class="slider-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="year_built" class="selectpicker w100 show-tick">
+<option value="0">Year built</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+ <option value="2013">2013</option>
+</select>
+</div>
+</div>
+</li> <li>
+<div class="search_option_button">
+<button type="submit" class="btn btn-block btn-thm">Search</button>
+</div>
+</li>
+</form>
+</ul>
+</div>
+</div> </div>
+<div class="col-md-12 col-lg-8">
+<div class="bravo-list-item">
+<div class="row">
+<div class="grid_list_search_result">
+<div class="col-sm-12 col-md-4 col-lg-4 col-xl-5">
+<div class="left_area tac-xsd">
+<p>
+11 properties found
+</p>
+</div>
+</div>
+<div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
+<div class="right_area text-right tac-xsd">
+<form method="GET">
+<ul>
+<li class="list-inline-item"><span class="shrtby">Sort by:</span>
+<select value="" onchange="this.form.submit()" name="filter" class="selectpicker show-tick">
+<option value="new">Newest</option>
+<option value="old">Oldest</option>
+<option value="price_high">Price [high to low]</option>
+<option value="price_low">Price [low to high]</option>
+<option value="name_high">Name [a-&gt;z]</option>
+<option value="name_low">Name [z-&gt;a]</option>
+</select>
+</li>
+</ul>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="list-item">
+<div class="row">
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-1.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="d-none"></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="1" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$259</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Apartment</p>
+<a target="_blank" href="property/renovated-apartment-1.html">
+<h4>Renovated Apartment</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> Paris</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 10</li>
+<li class="list-inline-item">Baths: 1</li>
+<li class="list-inline-item">Sq: 130 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/1.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="System Admin">
+</a></li>
+<li class="list-inline-item"><a href="agent/1.html">System Admin</a></li>
+</ul>
+<div class="fp_pdate float-right">05/13/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-2.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="list-inline-item"><a>Featured</a></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="2" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$900</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Condo</p>
+<a target="_blank" href="property/gorgeous-villa-bay-view-1.html">
+<h4>Gorgeous Villa Bay View</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> California</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 9</li>
+<li class="list-inline-item">Baths: 9</li>
+<li class="list-inline-item">Sq: 186 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/9.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="William Diana">
+</a></li>
+<li class="list-inline-item"><a href="agent/9.html">William Diana</a></li>
+</ul>
+<div class="fp_pdate float-right">05/12/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-3.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="d-none"></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="3" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$650</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Condo</p>
+<a target="_blank" href="property/luxury-family-home-1.html">
+<h4>Luxury Family Home</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> California</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 4</li>
+<li class="list-inline-item">Baths: 9</li>
+<li class="list-inline-item">Sq: 104 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/16.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah">
+</a></li>
+<li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
+</ul>
+<div class="fp_pdate float-right">05/12/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-4.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="list-inline-item"><a>Featured</a></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="4" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$800</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Family House</p>
+<a target="_blank" href="property/luxury-family-home.html">
+<h4>Luxury Family Home</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> New York, United States</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 7</li>
+<li class="list-inline-item">Baths: 4</li>
+<li class="list-inline-item">Sq: 158 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/10.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet">
+</a></li>
+<li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
+</ul>
+<div class="fp_pdate float-right">05/12/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-5.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="d-none"></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="5" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$220</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Apartment</p>
+<a target="_blank" href="property/renovated-apartment.html">
+<h4>Renovated Apartment</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> United States</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 4</li>
+<li class="list-inline-item">Baths: 3</li>
+<li class="list-inline-item">Sq: 173 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/13.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Shushi Yashashree">
+</a></li>
+<li class="list-inline-item"><a href="agent/13.html">Shushi Yashashree</a></li>
+</ul>
+<div class="fp_pdate float-right">05/13/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-6.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="list-inline-item"><a>Featured</a></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="6" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$320</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Condo</p>
+<a target="_blank" href="property/gorgeous-villa-bay-view.html">
+<h4>Gorgeous Villa Bay View</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> United States</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 4</li>
+<li class="list-inline-item">Baths: 10</li>
+<li class="list-inline-item">Sq: 190 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/16.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah">
+</a></li>
+<li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
+</ul>
+<div class="fp_pdate float-right">05/12/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-7.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="list-inline-item"><a>Featured</a></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="7" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$260</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Family House</p>
+<a target="_blank" href="property/east-village.html">
+<h4>EAST VILLAGE</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> California</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 10</li>
+<li class="list-inline-item">Baths: 3</li>
+<li class="list-inline-item">Sq: 130 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/10.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet">
+</a></li>
+<li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
+</ul>
+<div class="fp_pdate float-right">05/13/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-8.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="list-inline-item"><a>Featured</a></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="8" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$500</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Modern Villa</p>
+<a target="_blank" href="property/paris-greenwich-villa.html">
+<h4>PARIS GREENWICH VILLA</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> Paris</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 6</li>
+<li class="list-inline-item">Baths: 3</li>
+<li class="list-inline-item">Sq: 101 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/16.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah">
+</a></li>
+<li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
+</ul>
+<div class="fp_pdate float-right">05/12/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-9.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="list-inline-item"><a>Featured</a></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="9" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$350</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Condo</p>
+<a target="_blank" href="property/luxury-single.html">
+<h4>LUXURY SINGLE</h4>
+</a>
+<p><span class="flaticon-placeholder"></span> Los Angeles</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 9</li>
+<li class="list-inline-item">Baths: 1</li>
+<li class="list-inline-item">Sq: 132 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/9.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="William Diana">
+</a></li>
+<li class="list-inline-item"><a href="agent/9.html">William Diana</a></li>
+</ul>
+<div class="fp_pdate float-right">05/13/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="item">
+<div class="feat_property">
+<div class="thumb">
+<img class="img-whp" src="assets/uploads/demo/property/property-10.jpg" alt="property image">
+<div class="thmb_cntnt">
+<ul class="tag mb0">
+<li class="list-inline-item"><a>For Buy</a></li>
+<li class="list-inline-item"><a>Featured</a></li>
+</ul>
+<ul class="icon mb0">
+<li class="list-inline-item"><a class="service-wishlist " data-id="10" data-type="property"><i class="fa fa-heart"></i></a></li>
+</ul>
+<a class="fp_price" href="#">$250</a>
+</div>
+</div>
+<div class="details">
+<div class="tc_content">
+<p class="text-thm">Town House</p>
+<a target="_blank" href="property/lily-dale-village.html">
+<h4>LILY DALE VILLAGE</h4>
+</a>
+ <p><span class="flaticon-placeholder"></span> New York, United States</p>
+<ul class="prop_details mb0">
+<li class="list-inline-item">Beds: 10</li>
+<li class="list-inline-item">Baths: 1</li>
+<li class="list-inline-item">Sq: 168 sqft</li>
+</ul>
+</div>
+<div class="fp_footer">
+<ul class="fp_meta float-left mb0">
+<li class="list-inline-item"><a href="agent/1.html">
+<img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="System Admin">
+</a></li>
+<li class="list-inline-item"><a href="agent/1.html">System Admin</a></li>
+</ul>
+<div class="fp_pdate float-right">05/13/2021</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-12 mt20">
+<div class="mbp_pagination">
+<nav>
+<ul class="pagination">
+<li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Previous">
+<span class="page-link" aria-hidden="true">&lsaquo;</span>
+</li>
+<li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+<li class="page-item"><a class="page-link" href="property4658.html?page=2">2</a></li>
+<li class="page-item">
+<a class="page-link" href="property4658.html?page=2" rel="next" aria-label="Next &raquo;">&rsaquo;</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<app-footer></app-footer>

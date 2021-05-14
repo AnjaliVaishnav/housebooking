@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<body class="frontend-page page ">
+<div class="wrapper">
+<div class="preloader d-none"></div>
+
+<header class="header-nav menu_style_home_one navbar-scrolltofixed stricky main-menu  style2 ">
+<div class="container-fluid p0">
+
+<nav>
+
+<div class="menu-toggle">
+<img class="nav_logo_img img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
+<button type="button" id="menu-btn">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<a routerLink="/index" class="navbar_brand float-left dn-smd">
+<img class="logo1 img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
+<img class="logo2 img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
+<span>FindHouse</span>
+</a>
+
+
+<ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
+<li class=" depth-0"><a target="" routerLInk="/index">Home</a></li><li class=" depth-0"><a target="" href="#">Property</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/property">Property List</a></li><li class=" depth-1"><a target="" routerLink="../property/renovated-apartment-1.html">Property Detail</a></li></ul></li><li class=" depth-0"><a target="" href="#">Agencies</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/agency">Agencies</a></li><li class=" depth-1"><a target="" routerLink="../agency/real-estate-experts.html">Agency Detail</a></li><li class=" depth-1"><a target="" routerLink="/agent">Agent List</a></li><li class=" depth-1"><a target="" routerLink="../agent/1.html">Agent Detail</a></li></ul></li><li class=" active  depth-0"><a target="" href="#">Page</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/news">News</a></li><li class=" depth-1"><a target="" routerLink="../news/city-spotlight-philadelphia.html">News Detail</a></li><li class=" depth-1"><a target="" routerLink="/contact">Contact</a></li><li class=" active depth-1"><a target="" routerLink="/about">About</a></li></ul></li> <li class="dropdown">
+<a href="#" data-toggle="dropdown" class="is_login">
+USD
+<i class="fa fa-angle-down d-none"></i>
+</a>
+<ul class="dropdown-menu text-left width-auto">
+<li>
+<a href="about-us.html?set_currency=eur" class="is_login">
+EUR
+</a>
+</li>
+<li>
+<a href="about-us.html?set_currency=jpy" class="is_login">
+JPY
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown" class="is_login">
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+<ul class="dropdown-menu text-left">
+<li>
+<a routerLink="/about?set_lang=ja" class="is_login">
+<span class="flag-icon flag-icon-jp"></span>
+Japanese
+</a>
+</li>
+<li>
+<a href="../egy/page/about-us.html?set_lang=egy" class="is_login">
+<span class="flag-icon flag-icon-eg"></span>
+Egyptian
+</a>
+</li>
+<li>
+<a href="../ru/page/about-us.html?set_lang=ru" class="is_login">
+<span class="flag-icon flag-icon-ru"></span>
+ru
+</a>
+</li>
+</ul>
+</li>
+<li class="list-inline-item">
+<a href="javascript:void(0)" class="btn flaticon-user"> <span class="dn-lg" data-toggle="modal" data-target="#login">Login/</span> <span data-toggle="modal" data-target="#register">Register</span> </a>
+</li>
+<li class="list-inline-item add_listing"><a routerLInk="/login"><span class="flaticon-plus"></span><span class="dn-lg"> Create Listing</span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div id="page" class="stylehome1 h0">
+    <div class="mobile-menu">
+    <div class="header stylehome1">
+    <div class="main_logo_home2 text-center">
+    <img class="nav_logo_img img-fluid mt20" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
+    <span class="mt20">FindHouse</span>
+    </div>
+    <ul class="menu_bar_home2">
+    <li class="list-inline-item list_s"><a routerLink="/login"><span class="flaticon-user"></span></a></li>
+    <li class="list-inline-item"><a href="#menu"><span></span></a></li>
+    </ul>
+    </div>
+    </div>
+    <nav id="menu" class="stylehome1 mm-menu_offcanvas">
+    <ul>
+    <li class=" depth-0"><a target="" routerLink="/index">Home</a></li><li class=" depth-0"><a target="" href="#">Property</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/property">Property List</a></li><li class=" depth-1"><a target="" routerLink="../property/renovated-apartment-1.html">Property Detail</a></li></ul></li><li class=" depth-0"><a target="" href="#">Agencies</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/agency">Agencies</a></li><li class=" depth-1"><a target="" routerLink="../agency/real-estate-experts.html">Agency Detail</a></li><li class=" depth-1"><a target="" routerLink="/agent">Agent List</a></li><li class=" depth-1"><a target="" routerLink="../agent/1.html">Agent Detail</a></li></ul></li><li class=" active  depth-0"><a target="" href="#">Page</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/news">News</a></li><li class=" depth-1"><a target="" routerLink="../news/city-spotlight-philadelphia.html">News Detail</a></li><li class=" depth-1"><a target="" routerLink="/contact">Contact</a></li><li class=" active depth-1"><a target="" routerLink="/about">About</a></li></ul></li> <li><a routerLink="/login"><span class="flaticon-user"></span> Login</a></li>
+    <li><a routerLink="/register"><span class="flaticon-edit"></span> Register</a></li>
+    <li><li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="is_login">
+    USD
+    <i class="fa fa-angle-down d-none"></i>
+    </a>
+    <ul class=" text-left width-auto">
+    <li>
+    <a href="about-us.html?set_currency=eur" class="is_login">
+    EUR
+    </a>
+    </li>
+    <li>
+    <a href="about-us.html?set_currency=jpy" class="is_login">
+    JPY
+    </a>
+    </li>
+    </ul>
+    </li>
+    <li><li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="is_login">
+    <span class="flag-icon flag-icon-gb"></span>
+    English
+    </a>
+    <ul class=" text-left">
+    <li>
+    <a href="../ja/page/about-us.html?set_lang=ja" class="is_login">
+    <span class="flag-icon flag-icon-jp"></span>
+    Japanese
+    </a>
+    </li>
+    <li>
+    <a href="../egy/page/about-us.html?set_lang=egy" class="is_login">
+    <span class="flag-icon flag-icon-eg"></span>
+    Egyptian
+    </a>
+     </li>
+    <li>
+    <a href="../ru/page/about-us.html?set_lang=ru" class="is_login">
+    <span class="flag-icon flag-icon-ru"></span>
+    ru
+    </a>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </nav>
+    </div>
+
