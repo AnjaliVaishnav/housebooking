@@ -4,29 +4,41 @@
 <div class="col-md-5">
 <div class="">
 <h4 class="form-title">Login</h4>
-<form class="bravo-form-login" method="POST" action="http://findhouse.bookingcore.org/login">
+<form class="bravo-form-login" method="POST" action="http://findhouse.bookingcore.org/login" novalidate [formGroup]="loginForm">
 <input type="hidden" name="redirect" value="">
-<input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> <div class="form-group">
-<input type="text" class="form-control" name="email" autocomplete="off" placeholder="Email address">
+<input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> 
+<div class="form-group">
+<input type="email" class="form-control" name="email" autocomplete="off" placeholder="Email address" formControlName="email">
 <i class="input-icon fa fa-envelope-o"></i>
-<span class="invalid-feedback error error-email"></span>
+<div class="alert alert-danger" *ngIf="isValidInput('email')">
+ <div *ngIf="loginForm.controls['email'].errors?.required">
+    Email is required.
+ </div>
+ <div *ngIf="loginForm.controls['email'].errors?.pattern">
+    Invalid format.
+ </div>
+</div>
 </div>
 <div class="form-group">
-<input type="password" class="form-control" name="password" autocomplete="off" placeholder="Password">
+<input type="password" class="form-control" name="password" autocomplete="off" placeholder="Password" formControlName="password">
 <i class="input-icon fa fa-lock"></i>
-<span class="invalid-feedback error error-password"></span>
+<div class="alert alert-danger" *ngIf="isValidInput('password')">
+    <div *ngIf="loginForm.controls['password'].errors?.required">
+        Password is required
+     </div>
+</div>
 </div>
 <div class="form-group">
 <div class="d-flex justify-content-between">
 <label for="remember-me" class="mb0">
-<input type="checkbox" name="remember" id="remember-me" value="1"> Remember me <span class="checkmark fcheckbox"></span>
+<input type="checkbox" name="remember" value="1"> Remember me <span class="checkmark fcheckbox"></span>
 </label>
 <a routerLink="/reset">Forgot Password?</a>
 </div>
 </div>
 <div class="error message-error invalid-feedback"></div>
 <div class="form-group">
-<button class="btn btn-primary form-submit" type="submit">
+<button class="btn btn-primary form-submit" type="submit" (click)="onClick(loginForm.value)" [disabled]="!loginForm.valid">
 Login
 <span class="spinner-grow spinner-grow-sm icon-loading" role="status" aria-hidden="true"></span>
 </button>

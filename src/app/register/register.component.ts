@@ -19,6 +19,7 @@ export class RegisterComponent{
       lname: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')]],
       password: ['', Validators.required],
+      checkbox: [false, Validators.requiredTrue],
     });
   }
   isValidInput(value:any){
@@ -28,5 +29,8 @@ export class RegisterComponent{
 
   ngOnInit(): void {
   }
-
+  onClick(){
+    console.log(this.registerForm.value);
+    this.registerForm.reset();
+  }
 }
