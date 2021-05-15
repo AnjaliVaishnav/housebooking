@@ -3,19 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IndexComponent } from './index/index.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { NewsComponent } from './news/news.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { PropertyComponent } from './property/property.component';
-import { AgentComponent } from './agent/agent.component';
-import { AgencyComponent } from './agency/agency.component';
-import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { IndexComponent } from './Component/index/index.component';
+import { AboutComponent } from './Component/about/about.component';
+import { ContactComponent } from './Component/contact/contact.component';
+import { NewsComponent } from './Component/news/news.component';
+import { LoginComponent } from './Component/login/login.component';
+import { RegisterComponent } from './Component/register/register.component';
+import { PropertyComponent } from './Component/property/property.component';
+import { AgentComponent } from './Component/agent/agent.component';
+import { AgencyComponent } from './Component/agency/agency.component';
+import { ResetpasswordComponent } from './Component/resetpassword/resetpassword.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
-import {FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './Component/header/header.component';
+import {FooterComponent } from './Component/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,

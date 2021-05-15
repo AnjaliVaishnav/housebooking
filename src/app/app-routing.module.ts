@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { AgencyComponent } from './agency/agency.component';
-import { AgentComponent } from './agent/agent.component';
-import { ContactComponent } from './contact/contact.component';
-import { IndexComponent } from './index/index.component';
-import { LoginComponent } from './login/login.component';
-import { NewsComponent } from './news/news.component';
-import { PropertyComponent } from './property/property.component';
-import { RegisterComponent } from './register/register.component';
-import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { AboutComponent } from './Component/about/about.component';
+import { AgencyComponent } from './Component/agency/agency.component';
+import { AgentComponent } from './Component/agent/agent.component';
+import { ContactComponent } from './Component/contact/contact.component';
+import { IndexComponent } from './Component/index/index.component';
+import { LoginComponent } from './Component/login/login.component';
+import { NewsComponent } from './Component/news/news.component';
+import { PropertyComponent } from './Component/property/property.component';
+import { RegisterComponent } from './Component/register/register.component';
+import { ResetpasswordComponent } from './Component/resetpassword/resetpassword.component';
 
 const routes: Routes = [
   {path: 'index', component: IndexComponent},
