@@ -352,9 +352,26 @@ a,
     .bravo_wrap .bravo_detail_car .bravo_content .g-header .review-score .head .left .text-rating {
         color: #5191fa;
     }
-
-    body{
-        }
+    /* .owl-carousel .owl-item {
+        min-height: 1px;
+        float: left; */
+        /* -webkit-backface-visibility: hidden; */
+        /* -webkit-touch-callout: none;
+    } */
+    /* .owl-carousel .owl-item, .owl-carousel .owl-wrapper { */
+        /* -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0); */
+    /* } */
+    /* .owl-carousel, .owl-carousel .owl-item {
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+    } */
+    
+        
 
     
     

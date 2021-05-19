@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// import { CarouselModule } from 'ngx-owl-carousel-o';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './Component/index/index.component';
@@ -36,7 +38,9 @@ import {FooterComponent } from './Component/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    // BrowserAnimationsModule,
+    // CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
