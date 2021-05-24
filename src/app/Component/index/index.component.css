@@ -1,6 +1,21 @@
-.owl-carousel .item {
-    /* height: 10rem;
-    background: #4DC7A0;
-    padding: 1rem; */
-    z-index: auto;
+.feature_property_slider{
+    transform: translate3d(-1170px, 0px, 0px); 
+    transition: all 0s ease 0s;
+    width: 6630px;
+    
+}
+/* .item{
+    width: 360px;
+    margin-right: 30px;
+}
+.avatar{
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+} */
+.testimonial_grid_slider{
+    display: inline;
+    transform: translate3d(-1140px, 0px, 0px);
+     transition: all 0s ease 0s;
+      width: 3990px;
 }

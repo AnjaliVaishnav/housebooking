@@ -1,54 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" class="">
-<body class="frontend-page page ">
-<div class="wrapper">
-<div class="preloader d-none"></div>
-
-<header class="header-nav menu_style_home_one navbar-scrolltofixed stricky main-menu  style2 ">
-<div class="container-fluid p0">
-
-<nav>
-
-<div class="menu-toggle">
-<img class="nav_logo_img img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
-<button type="button" id="menu-btn">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-</div>
-<a routerLink="/index" class="navbar_brand float-left dn-smd">
-<img class="logo1 img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
-<img class="logo2 img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
-<span>FindHouse</span>
-</a>
-
-
-<ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
-<li class=" depth-0"><a target="" routerLInk="/index">Home</a></li><li class=" depth-0"><a target="" href="#">Property</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/property">Property List</a></li><li class=" depth-1"><a target="" routerLink="../property/renovated-apartment-1.html">Property Detail</a></li></ul></li><li class=" depth-0"><a target="" href="#">Agencies</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/agency">Agencies</a></li><li class=" depth-1"><a target="" routerLink="../agency/real-estate-experts.html">Agency Detail</a></li><li class=" depth-1"><a target="" routerLink="/agent">Agent List</a></li><li class=" depth-1"><a target="" routerLink="../agent/1.html">Agent Detail</a></li></ul></li><li class=" active  depth-0"><a target="" href="#">Page</a><ul class="children-menu menu-dropdown"><li class=" depth-1"><a target="" routerLink="/news">News</a></li><li class=" depth-1"><a target="" routerLink="../news/city-spotlight-philadelphia.html">News Detail</a></li><li class=" depth-1"><a target="" routerLink="/contact">Contact</a></li><li class=" active depth-1"><a target="" routerLink="/about">About</a></li></ul></li> <li class="dropdown">
-<a href="#" data-toggle="dropdown" class="is_login">
-USD
-<i class="fa fa-angle-down d-none"></i>
-</a>
-<ul class="dropdown-menu text-left width-auto">
-<li>
-<a href="about-us.html?set_currency=eur" class="is_login">
-EUR
-</a>
-</li>
-<li>
-<a href="about-us.html?set_currency=jpy" class="is_login">
-JPY
-</a>
-</li>
-</ul>
-</li>
-<li class="dropdown">
-<a href="#" data-toggle="dropdown" class="is_login">
-<span class="flag-icon flag-icon-gb"></span>
-English
-</a>
-<ul class="dropdown-menu text-left">
+    <html lang="en" class="">
+        <body class="frontend-page page ">
+            <div class="wrapper">
+                <div class="preloader d-none"></div>
+                    <header class="header-nav menu_style_home_one navbar-scrolltofixed stricky main-menu style2 ">
+                        <div class="container-fluid p0">
+                            <nav>
+                            <div class="menu-toggle">
+                                <img class="nav_logo_img img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
+                                <button type="button" id="menu-btn">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <a routerLink="/index" class="navbar_brand float-left dn-smd">
+                                <img class="logo1 img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
+                                <img class="logo2 img-fluid" src="../assets/uploads/demo/general/header-logo2.png" alt="FindHouse">
+                                <span>FindHouse</span>
+                            </a>
+                            <ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
+<li class=" depth-0"><a target="" routerLInk="/index">Home</a></li><li class=" depth-0">
+    <a target="" href="#">Property</a>
+    <ul class="children-menu menu-dropdown">
+        <li class=" depth-1"><a target="" routerLink="/property">Property List</a></li>
+        <li class=" depth-1">
+            <a target="" routerLink="../property/renovated-apartment-1.html">Property Detail</a></li>
+        </ul></li>
+        <li class=" depth-0">
+            <a target="" href="#">Agencies</a>
+            <ul class="children-menu menu-dropdown">
+                <li class=" depth-1"><a target="" routerLink="/agency">Agencies</a></li>
+                <li class=" depth-1"><a target="" routerLink="../agency/real-estate-experts.html">Agency Detail</a></li>
+                <li class=" depth-1"><a target="" routerLink="/agent">Agent List</a></li>
+                <li class=" depth-1"><a target="" routerLink="../agent/1.html">Agent Detail</a></li>
+            </ul>
+        </li>
+        <li class=" active  depth-0"><a target="" href="#">Page</a>
+            <ul class="children-menu menu-dropdown">
+                <li class=" depth-1"><a target="" routerLink="/news">News</a></li>
+                <li class=" depth-1"><a target="" routerLink="../news/city-spotlight-philadelphia.html">News Detail</a></li>
+                <li class=" depth-1"><a target="" routerLink="/contact">Contact</a></li>
+                <li class=" active depth-1"><a target="" routerLink="/about">About</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="is_login">USD
+                <i class="fa fa-angle-down d-none"></i>
+            </a>
+            <ul class="dropdown-menu text-left width-auto">
+                <li><a href="about-us.html?set_currency=eur" class="is_login">EUR</a></li>
+                <li><a href="about-us.html?set_currency=jpy" class="is_login">JPY</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="is_login">
+                <span class="flag-icon flag-icon-gb"></span>English
+            </a>
+            <ul class="dropdown-menu text-left">
 <li>
 <a routerLink="/about?set_lang=ja" class="is_login">
 <span class="flag-icon flag-icon-jp"></span>

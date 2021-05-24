@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-// import { CarouselModule } from 'ngx-owl-carousel-o';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+// import { OwlModule } from "ngx-owl-carousel";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './Component/index/index.component';
@@ -18,6 +19,7 @@ import { ResetpasswordComponent } from './Component/resetpassword/resetpassword.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './Component/header/header.component';
 import {FooterComponent } from './Component/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +41,10 @@ import {FooterComponent } from './Component/footer/footer.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    // BrowserAnimationsModule,
-    // CarouselModule
+    // OwlModule,
+    BrowserAnimationsModule,
+    CarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

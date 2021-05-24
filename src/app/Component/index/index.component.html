@@ -18,10 +18,11 @@
                                     <a class="nav-link" id="pills-rent-tab" data-toggle="pill" href="#pills-rent" role="tab" aria-controls="pills-rent" aria-selected="true">Rent</a>
                                 </li>
                             </ul>
-                        <div class="tab-content home1_adsrchfrm" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-buy" role="tabpanel" aria-labelledby="pills-home-tab">
-                                <form method="get" action="http://findhouse.bookingcore.org/property">
-                                    <input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> <input type="hidden" name="property_type" value="1">
+                            <div class="tab-content home1_adsrchfrm" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-buy" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <form method="get" action="http://findhouse.bookingcore.org/property">
+                                        <input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX">
+                                        <input type="hidden" name="property_type" value="1">
                                         <div class="home1-advnc-search">
                                             <ul class="h1ads_1st_list mb0">
                                                 <li class="search_area">
@@ -30,882 +31,653 @@
                                                     </div>
                                                 </li> 
                                                 <li class="mb-3">
-                                                    <div class="search_option_two">
-                                                        <div class="candidate_revew_select">
-                                                            <select name="category_id" class="selectpicker w100 show-tick">
-                                                                <option value="0">Property Category</option>
-                                                                <option value="1">Apartment</option>
-                                                                <option value="2">Condo</option>
-                                                                <option value="3">Family House</option>
-                                                                <option value="4">Modern Villa</option>
-                                                                <option value="5">Town House</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </li> 
-                                                <li class="mb-3">
-                                                    <div class="search_option_two">
-                                                        <div class="candidate_revew_select">
-                                                            <select name="location_id" class="selectpicker w100 show-tick">
-                                                                <option value="0">Location</option>
-                                                                <option value="1">Paris</option>
-                                                                <option value="2">New York, United States</option>
-                                                                <option value="3">California</option>
-                                                                <option value="4">United States</option>
-                                                                <option value="5">Los Angeles</option>
-                                                                <option value="6">New Jersey</option>
-                                                                <option value="7">San Francisco</option>
-                                                                <option value="8">Virginia</option>
-                                                                <option value="9">Россия</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </li> 
-                                                <li>
-                                                    <div class="small_dropdown2 property_select_price">
-                                                        <div id="prncgs2" class="btn dd_btn">
-                                                            <span>Price</span>
-                                                            <label for="exampleInputEmail2"><span class="dropdown-toggle"></span></label>
-                                                        </div>
-                                                        <div class="dd_content2 property_select_price--slider">
-                                                            <div class="pricing_acontent">
-                                                                <input type="text" name="price_range[0]" class="amount" placeholder="0">
-                                                                <input type="text" name="price_range[1]" class="amount2" placeholder="900.00">
-                                                                <input type="hidden" id="max_value" value="900.00">
-                                                                <div class="slider-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="custome_fields_520 list-inline-item">
-                                                    <div class="navbered">
-                                                        <div class="mega-dropdown">
-                                                            <span id="show_advbtn" class="dropbtn">Advanced <i class="flaticon-more pl10 flr-520"></i></span>
-                                                            <div class="dropdown-content">
-                                                                <div class="row p-md-1 pt0-xsd">
-                                                                    <div class="col-lg-11 col-xl-10">
-                                                                        <ul class="apeartment_area_list mb0">
-                                                                            <li class="mb-3">
-                                                                            <div class="search_option_two">
-                                                                                <div class="candidate_revew_select">
-                                                                                    <select name="bathroom" class="selectpicker w100 show-tick">
-                                                                                        <option value="0">Bathrooms</option>
-                                                                                        <option value="1">1</option>
-                                                                                        <option value="2">2</option>
-                                                                                        <option value="3">3</option>
-                                                                                        <option value="4">4</option>
-                                                                                        <option value="5">5</option>
-                                                                                        <option value="6">6</option>
-                                                                                        <option value="7">7</option>
-                                                                                        <option value="8">8</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                            </li> 
-                                                                            <li class="mb-3">
-                                                                                <div class="search_option_two">
-                                                                                    <div class="candidate_revew_select">
-                                                                                        <select name="bedroom" class="selectpicker w100 show-tick">
-                                                                                            <option value="0">Bedrooms</option>
-                                                                                            <option value="1">1</option>
-                                                                                            <option value="2">2</option>
-                                                                                            <option value="3">3</option>
-                                                                                            <option value="4">4</option>
-                                                                                            <option value="5">5</option>
-                                                                                            <option value="6">6</option>
-                                                                                            <option value="7">7</option>
-                                                                                            <option value="8">8</option>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li> 
-                                                                            <li class="mb-3">
-                                                                                <div class="search_option_two">
-                                                                                    <div class="candidate_revew_select">
-                                                                                        <select name="garage" class="selectpicker w100 show-tick">
-                                                                                            <option value="0">Garages</option>
-                                                                                            <option value="1">1</option>
-                                                                                            <option value="2">2</option>
-                                                                                            <option value="3">3</option>
-                                                                                            <option value="4">4</option>
-                                                                                            <option value="5">5</option>
-                                                                                            <option value="6">6</option>
-                                                                                            <option value="7">7</option>
-                                                                                            <option value="8">8</option>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                            <li class="mb-3">
-                                                                                <div class="search_option_two">
-                                                                                    <div class="candidate_revew_select">
-                                                                                        <select name="year_built" class="selectpicker w100 show-tick">
-                                                                                            <option value="0">Year built</option>
-                                                                                            <option value="2021">2021</option>
-                                                                                            <option value="2020">2020</option>
-                                                                                            <option value="2019">2019</option>
-                                                                                            <option value="2018">2018</option>
-                                                                                            <option value="2017">2017</option>
-                                                                                            <option value="2016">2016</option>
-                                                                                            <option value="2015">2015</option>
-                                                                                            <option value="2014">2014</option>
-                                                                                            <option value="2013">2013</option>
-                                                                                        </select>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-lg-1 col-xl-2">
-                                                                        <div class="mega_dropdown_content_closer">
-                                                                            <h5 class="text-thm text-right mt15"><span id="hide_advbtn" class="curp">Hide</span></h5>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <div class="search_option_button">
-                                                        <button type="submit" class="btn btn-thm">Search</button>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="category_id" class="selectpicker w100 show-tick">
+<option value="0">Property Category</option>
+<option value="1">Apartment</option>
+<option value="2">Condo</option>
+<option value="3">Family House</option>
+<option value="4">Modern Villa</option>
+<option value="5">Town House</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="location_id" class="selectpicker w100 show-tick">
+<option value="0">Location</option>
+<option value="1">Paris</option>
+<option value="2">New York, United States</option>
+<option value="3">California</option>
+<option value="4">United States</option>
+<option value="5">Los Angeles</option>
+<option value="6">New Jersey</option>
+<option value="7">San Francisco</option>
+<option value="8">Virginia</option>
+<option value="9">Россия</option>
+</select>
+</div>
+</div>
+</li> <li>
+<div class="small_dropdown2 property_select_price">
+<div id="prncgs2" class="btn dd_btn">
+<span>Price</span>
+<label for="exampleInputEmail2"><span class="dropdown-toggle"></span></label>
+</div>
+<div class="dd_content2 property_select_price--slider">
+<div class="pricing_acontent">
+<input type="text" name="price_range[0]" class="amount" placeholder="0">
+<input type="text" name="price_range[1]" class="amount2" placeholder="900.00">
+<input type="hidden" id="max_value" value="900.00">
+<div class="slider-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="custome_fields_520 list-inline-item">
+<div class="navbered">
+<div class="mega-dropdown">
+<span id="show_advbtn" class="dropbtn">Advanced <i class="flaticon-more pl10 flr-520"></i></span>
+<div class="dropdown-content">
+<div class="row p-md-1 pt0-xsd">
+<div class="col-lg-11 col-xl-10">
+<ul class="apeartment_area_list mb0">
+<li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="bathroom" class="selectpicker w100 show-tick">
+<option value="0">Bathrooms</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="bedroom" class="selectpicker w100 show-tick">
+<option value="0">Bedrooms</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="garage" class="selectpicker w100 show-tick">
+<option value="0">Garages</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</div>
+</div>
+</li> <li class="mb-3">
+<div class="search_option_two">
+<div class="candidate_revew_select">
+<select name="year_built" class="selectpicker w100 show-tick">
+<option value="0">Year built</option>
+ <option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+</select>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-lg-1 col-xl-2">
+<div class="mega_dropdown_content_closer">
+<h5 class="text-thm text-right mt15"><span id="hide_advbtn" class="curp">Hide</span></h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="list-inline-item">
+<div class="search_option_button">
+<button type="submit" class="btn btn-thm">Search</button>
+</div>
+</li>
+</ul>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="feature-property" class="feature-property bgc-f7">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<a href="#feature-property">
+<div class="mouse_scroll">
+<div class="icon">
+<h4>Scroll Down</h4>
+<p>to discover more</p>
+</div>
+<div class="thumb">
+<img src="assets/findhouse/images/resource/mouse.png" alt="mouse.png">
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- Slidr start -->
+<div class="container ovh">
+<div class="row">
+<div class="col-lg-6 offset-lg-3">
+<div class="main-title text-center mb40">
+<h2>Featured Properties</h2>
+<p>Handpicked properties by our team.</p>
+</div>
+</div>
+<div class="col-lg-12">
+    <div class="feature_property_slider"></div>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            <div class="item" style="width: 360px; margin-right: 30px; display: block;">
+                <div class="feat_property">
+                <div class="thumb">
+                <img class="img-whp" src="assets/uploads/demo/property/property-11.jpg" alt="property image">
+                <div class="thmb_cntnt">
+                <ul class="tag mb0">
+                <li class="list-inline-item"><a>For Buy</a></li>
+                <li class="list-inline-item"><a>Featured</a></li>
+                </ul>
+                <ul class="icon mb0">
+                <li class="list-inline-item"><a class="service-wishlist " data-id="11" data-type="property"><i class="fa fa-heart"></i></a></li>
+                </ul>
+                <a class="fp_price" href="#">$150</a>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="feature-property" class="feature-property bgc-f7">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <a href="#feature-property">
-                        <div class="mouse_scroll">
-                            <div class="icon">
-                                <h4>Scroll Down</h4>
-                                <p>to discover more</p>
-                            </div>
-                            <div class="thumb">
-                                <img src="assets/findhouse/images/resource/mouse.png" alt="mouse.png">
-                            </div>
-                        </div>
+                </div>
+                <div class="details">
+                <div class="tc_content">
+                <p class="text-thm">Modern Villa</p>
+                <a href="property/stay-greenwich-village.html">
+                <h4>STAY GREENWICH VILLAGE</h4>
+                </a>
+                <p><span class="flaticon-placeholder"></span> California</p>
+                <ul class="prop_details mb0">
+                <li class="list-inline-item">Beds: 8</li>
+                <li class="list-inline-item">Baths: 1</li>
+                <li class="list-inline-item">Sq: 106 sqft</li>
+                </ul>
+                </div>
+                <div class="fp_footer">
+                <ul class="fp_meta float-left mb0">
+                <li class="list-inline-item"><a href="agent/10.html">
+                <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet" style="width:40px; border-radius: 50%; height: 40px;">
+                </a></li>
+                <li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
+                </ul>
+                <div class="fp_pdate float-right">05/13/2021</div>
+                </div>
+                </div>
+                </div>
+                </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="item" style="width: 360px; margin-right: 30px;">
+                <div class="feat_property">
+                <div class="thumb">
+                <img class="img-whp" src="assets/uploads/demo/property/property-10.jpg" alt="property image">
+                <div class="thmb_cntnt">
+                <ul class="tag mb0">
+                <li class="list-inline-item"><a>For Buy</a></li>
+                <li class="list-inline-item"><a>Featured</a></li>
+                </ul>
+                <ul class="icon mb0">
+                <li class="list-inline-item"><a class="service-wishlist " data-id="10" data-type="property"><i class="fa fa-heart"></i></a></li>
+                </ul>
+                <a class="fp_price" href="#">$250</a>
+                </div>
+                </div>
+                <div class="details">
+                <div class="tc_content">
+                <p class="text-thm">Town House</p>
+                <a href="property/lily-dale-village.html">
+                <h4>LILY DALE VILLAGE</h4>
+                </a>
+                <p><span class="flaticon-placeholder"></span> New York, United States</p>
+                <ul class="prop_details mb0">
+                <li class="list-inline-item">Beds: 10</li>
+                <li class="list-inline-item">Baths: 1</li>
+                <li class="list-inline-item">Sq: 168 sqft</li>
+                </ul>
+                </div>
+                <div class="fp_footer">
+                <ul class="fp_meta float-left mb0">
+                <li class="list-inline-item"><a href="agent/1.html">
+                <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="System Admin" style="width:40px; border-radius: 50%; height: 40px;">
+                </a></li>
+                <li class="list-inline-item"><a href="agent/1.html">System Admin</a></li>
+                </ul>
+                <div class="fp_pdate float-right">05/13/2021</div>
+                </div>
+                </div>
+                </div>
+                </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="item" style="width: 360px; margin-right: 30px;">
+                <div class="feat_property">
+                <div class="thumb">
+                <img class="img-whp" src="assets/uploads/demo/property/property-9.jpg" alt="property image">
+                <div class="thmb_cntnt">
+                <ul class="tag mb0">
+                <li class="list-inline-item"><a>For Buy</a></li>
+                <li class="list-inline-item"><a>Featured</a></li>
+                </ul>
+                <ul class="icon mb0">
+                <li class="list-inline-item"><a class="service-wishlist " data-id="9" data-type="property"><i class="fa fa-heart"></i></a></li>
+                </ul>
+                <a class="fp_price" href="#">$350</a>
+                </div>
+                </div>
+                <div class="details">
+                <div class="tc_content">
+                <p class="text-thm">Condo</p>
+                <a href="property/luxury-single.html">
+                <h4>LUXURY SINGLE</h4>
+                </a>
+                <p><span class="flaticon-placeholder"></span> Los Angeles</p>
+                <ul class="prop_details mb0">
+                <li class="list-inline-item">Beds: 9</li>
+                <li class="list-inline-item">Baths: 1</li>
+                <li class="list-inline-item">Sq: 132 sqft</li>
+                </ul>
+                </div>
+                <div class="fp_footer">
+                <ul class="fp_meta float-left mb0">
+                <li class="list-inline-item"><a href="agent/9.html">
+                <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="William Diana" style="width:40px; border-radius: 50%; height: 40px;">
+                </a></li>
+                <li class="list-inline-item"><a href="agent/9.html">William Diana</a></li>
+                </ul>
+                <div class="fp_pdate float-right">05/13/2021</div>
+                </div>
+                </div>
+                </div>
+                </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="item" style="width: 360px; margin-right: 30px;">
+                <div class="feat_property">
+                <div class="thumb">
+                <img class="img-whp" src="assets/uploads/demo/property/property-8.jpg" alt="property image">
+                <div class="thmb_cntnt">
+                <ul class="tag mb0">
+                <li class="list-inline-item"><a>For Buy</a></li>
+                <li class="list-inline-item"><a>Featured</a></li>
+                </ul>
+                <ul class="icon mb0">
+                <li class="list-inline-item"><a class="service-wishlist " data-id="8" data-type="property"><i class="fa fa-heart"></i></a></li>
+                </ul>
+                <a class="fp_price" href="#">$500</a>
+                </div>
+                </div>
+                <div class="details">
+                <div class="tc_content">
+                <p class="text-thm">Modern Villa</p>
+                <a href="property/paris-greenwich-villa.html">
+                <h4>PARIS GREENWICH VILLA</h4>
+                </a>
+                <p><span class="flaticon-placeholder"></span> Paris</p>
+                <ul class="prop_details mb0">
+                <li class="list-inline-item">Beds: 6</li>
+                <li class="list-inline-item">Baths: 3</li>
+                <li class="list-inline-item">Sq: 101 sqft</li>
+                </ul>
+                </div>
+                <div class="fp_footer">
+                <ul class="fp_meta float-left mb0">
+                <li class="list-inline-item"><a href="agent/16.html">
+                <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah" style="width:40px; border-radius: 50%; height: 40px;">
+                </a></li>
+                <li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
+                </ul>
+                <div class="fp_pdate float-right">05/12/2021</div>
+                </div>
+                </div>
+                </div>
+                </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="item" style="width: 360px; margin-right: 30px;">
+                <div class="feat_property">
+                <div class="thumb">
+                <img class="img-whp" src="assets/uploads/demo/property/property-7.jpg" alt="property image">
+                <div class="thmb_cntnt">
+                <ul class="tag mb0">
+                <li class="list-inline-item"><a>For Buy</a></li>
+                <li class="list-inline-item"><a>Featured</a></li>
+                </ul>
+                <ul class="icon mb0">
+                <li class="list-inline-item"><a class="service-wishlist " data-id="7" data-type="property"><i class="fa fa-heart"></i></a></li>
+                </ul>
+                <a class="fp_price" href="#">$260</a>
+                </div>
+                </div>
+                <div class="details">
+                <div class="tc_content">
+                <p class="text-thm">Family House</p>
+                <a href="property/east-village.html">
+                <h4>EAST VILLAGE</h4>
+                </a>
+                <p><span class="flaticon-placeholder"></span> California</p>
+                <ul class="prop_details mb0">
+                <li class="list-inline-item">Beds: 10</li>
+                <li class="list-inline-item">Baths: 3</li>
+                <li class="list-inline-item">Sq: 130 sqft</li>
+                </ul>
+                </div>
+                <div class="fp_footer">
+                <ul class="fp_meta float-left mb0">
+                <li class="list-inline-item"><a href="agent/10.html">
+                <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet" style="width:40px; border-radius: 50%; height: 40px;">
+                </a></li>
+                <li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
+                </ul>
+                <div class="fp_pdate float-right">05/13/2021</div>
+                </div>
+                </div>
+                </div>
+                </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="item" style="width: 360px; margin-right: 30px;">
+                <div class="feat_property">
+                <div class="thumb">
+                <img class="img-whp" src="assets/uploads/demo/property/property-6.jpg" alt="property image">
+                <div class="thmb_cntnt">
+                <ul class="tag mb0">
+                <li class="list-inline-item"><a>For Buy</a></li>
+                <li class="list-inline-item"><a>Featured</a></li>
+                </ul>
+                <ul class="icon mb0">
+                <li class="list-inline-item"><a class="service-wishlist " data-id="6" data-type="property"><i class="fa fa-heart"></i></a></li>
+                </ul>
+                <a class="fp_price" href="#">$320</a>
+                </div>
+                </div>
+                <div class="details">
+                <div class="tc_content">
+                <p class="text-thm">Condo</p>
+                <a href="property/gorgeous-villa-bay-view.html">
+                <h4>Gorgeous Villa Bay View</h4>
+                </a>
+                <p><span class="flaticon-placeholder"></span> United States</p>
+                <ul class="prop_details mb0">
+                <li class="list-inline-item">Beds: 4</li>
+                <li class="list-inline-item">Baths: 10</li>
+                <li class="list-inline-item">Sq: 190 sqft</li>
+                </ul>
+                </div>
+                <div class="fp_footer">
+                <ul class="fp_meta float-left mb0">
+                <li class="list-inline-item"><a href="agent/16.html">
+                <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah" style="width:40px; border-radius: 50%; height: 40px;">
+                </a></li>
+                <li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
+                </ul>
+                <div class="fp_pdate float-right">05/12/2021</div>
+                </div>
+                </div>
+                </div>
+                </div>
+        </ng-template>
+        <ng-template carouselSlide>
+                <div class="item" style="width: 360px; margin-right: 30px;">
+                    <div class="feat_property">
+                    <div class="thumb">
+                    <img class="img-whp" src="assets/uploads/demo/property/property-5.jpg" alt="property image">
+                    <div class="thmb_cntnt">
+                    <ul class="tag mb0">
+                    <li class="list-inline-item"><a>For Buy</a></li>
+                     <li class="d-none"></li>
+                    </ul>
+                    <ul class="icon mb0">
+                    <li class="list-inline-item"><a class="service-wishlist " data-id="5" data-type="property"><i class="fa fa-heart"></i></a></li>
+                    </ul>
+                    <a class="fp_price" href="#">$220</a>
+                    </div>
+                    </div>
+                    <div class="details">
+                    <div class="tc_content">
+                    <p class="text-thm">Apartment</p>
+                    <a href="property/renovated-apartment.html">
+                    <h4>Renovated Apartment</h4>
                     </a>
-                </div>
-            </div>
-        </div>
-        <div class="container ovh">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="main-title text-center mb40">
-                        <h2>Featured Properties</h2>
-                        <p>Handpicked properties by our team.</p>
+                    <p><span class="flaticon-placeholder"></span> United States</p>
+                    <ul class="prop_details mb0">
+                    <li class="list-inline-item">Beds: 4</li>
+                    <li class="list-inline-item">Baths: 3</li>
+                    <li class="list-inline-item">Sq: 173 sqft</li>
+                    </ul>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="feature_property_slider owl-carousel owl-theme owl-loaded">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage" style="transform: translate3d(-1170px, 0px, 0px); transition: all 0s ease 0s; width: 6630px;">
-                                <div class="owl-item cloned" style="width: 360px; margin-right: 30px;">
-                                    <div class="item">
-                                         <div class="feat_property">
-                                            <div class="thumb">
-                                                <img class="img-whp" src="assets/uploads/demo/property/property-3.jpg" alt="property image">
-                                                    <div class="thmb_cntnt">
-                                                        <ul class="tag mb0">
-                                                            <li class="list-inline-item"><a>For Buy</a></li>
-                                                            <li class="d-none"></li>
-                                                        </ul>
-                                                        <ul class="icon mb0">
-                                                            <li class="list-inline-item">
-                                                                <a class="service-wishlist " data-id="3" data-type="property">
-                                                                    <i class="fa fa-heart"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <a class="fp_price" href="#">$650</a>
-                                                    </div>
-                                            </div>
-                                            <div class="details">
-                                                <div class="tc_content">
-                                                    <p class="text-thm">Condo</p>
-                                                    <a href="property/luxury-family-home-1.html">
-                                                        <h4>Luxury Family Home</h4>
-                                                    </a>
-                                                    <p><span class="flaticon-placeholder"></span> California</p>
-                                                    <ul class="prop_details mb0">
-                                                        <li class="list-inline-item">Beds: 4</li>
-                                                        <li class="list-inline-item">Baths: 9</li>
-                                                        <li class="list-inline-item">Sq: 104 sqft</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="fp_footer">
-                                                    <ul class="fp_meta float-left mb0">
-                                                        <li class="list-inline-item">
-                                                            <a href="agent/16.html">
-                                                                <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah">
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="agent/16.html">Elizabeth Norah</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="fp_pdate float-right">05/12/2021</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned" style="width: 360px; margin-right: 30px;">
-                                    <div class="item">
-                                        <div class="feat_property">
-                                            <div class="thumb">
-                                                <img class="img-whp" src="assets/uploads/demo/property/property-2.jpg" alt="property image">
-                                                    <div class="thmb_cntnt">
-                                                        <ul class="tag mb0">
-                                                            <li class="list-inline-item"><a>For Buy</a></li>
-                                                            <li class="list-inline-item"><a>Featured</a></li>
-                                                        </ul>
-                                                        <ul class="icon mb0">
-                                                            <li class="list-inline-item">
-                                                                <a class="service-wishlist " data-id="2" data-type="property">
-                                                                    <i class="fa fa-heart"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <a class="fp_price" href="#">$900</a>
-                                                    </div>
-                                                </div>
-                                                <div class="details">
-                                                    <div class="tc_content">
-                                                        <p class="text-thm">Condo</p>
-                                                        <a href="property/gorgeous-villa-bay-view-1.html">
-                                                            <h4>Gorgeous Villa Bay View</h4>
-                                                        </a>
-                                                        <p><span class="flaticon-placeholder"></span> California</p>
-                                                        <ul class="prop_details mb0">
-                                                            <li class="list-inline-item">Beds: 9</li>
-                                                            <li class="list-inline-item">Baths: 9</li>
-                                                            <li class="list-inline-item">Sq: 186 sqft</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="fp_footer">
-                                                        <ul class="fp_meta float-left mb0">
-                                                            <li class="list-inline-item">
-                                                                <a href="agent/9.html">
-                                                                <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="William Diana">
-                                                            </a>
-                                                            </li>
-                                                            <li class="list-inline-item">
-                                                               <a href="agent/9.html">William Diana</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="fp_pdate float-right">05/12/2021</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item cloned" style="width: 360px; margin-right: 30px;">
-                                        <div class="item">
-                                            <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-1.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="d-none"></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="1" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$259</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Apartment</p>
-    <a href="property/renovated-apartment-1.html">
-    <h4>Renovated Apartment</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> Paris</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 10</li>
-    <li class="list-inline-item">Baths: 1</li>
-    <li class="list-inline-item">Sq: 130 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/1.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="System Admin">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/1.html">System Admin</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item active" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-11.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="11" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$150</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Modern Villa</p>
-    <a href="property/stay-greenwich-village.html">
-    <h4>STAY GREENWICH VILLAGE</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> California</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 8</li>
-    <li class="list-inline-item">Baths: 1</li>
-    <li class="list-inline-item">Sq: 106 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/10.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item active" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-10.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="10" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$250</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Town House</p>
-    <a href="property/lily-dale-village.html">
-    <h4>LILY DALE VILLAGE</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> New York, United States</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 10</li>
-    <li class="list-inline-item">Baths: 1</li>
-    <li class="list-inline-item">Sq: 168 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/1.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="System Admin">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/1.html">System Admin</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item active" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-9.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="9" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$350</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Condo</p>
-    <a href="property/luxury-single.html">
-    <h4>LUXURY SINGLE</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> Los Angeles</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 9</li>
-    <li class="list-inline-item">Baths: 1</li>
-    <li class="list-inline-item">Sq: 132 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/9.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="William Diana">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/9.html">William Diana</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-8.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="8" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$500</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Modern Villa</p>
-    <a href="property/paris-greenwich-villa.html">
-    <h4>PARIS GREENWICH VILLA</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> Paris</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 6</li>
-    <li class="list-inline-item">Baths: 3</li>
-    <li class="list-inline-item">Sq: 101 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/16.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/12/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-7.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="7" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$260</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Family House</p>
-    <a href="property/east-village.html">
-    <h4>EAST VILLAGE</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> California</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 10</li>
-    <li class="list-inline-item">Baths: 3</li>
-    <li class="list-inline-item">Sq: 130 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/10.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-6.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="6" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$320</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Condo</p>
-    <a href="property/gorgeous-villa-bay-view.html">
-    <h4>Gorgeous Villa Bay View</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> United States</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 4</li>
-    <li class="list-inline-item">Baths: 10</li>
-    <li class="list-inline-item">Sq: 190 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/16.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/12/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-5.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-     <li class="d-none"></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="5" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$220</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Apartment</p>
-    <a href="property/renovated-apartment.html">
-    <h4>Renovated Apartment</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> United States</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 4</li>
-    <li class="list-inline-item">Baths: 3</li>
-    <li class="list-inline-item">Sq: 173 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/13.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Shushi Yashashree">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/13.html">Shushi Yashashree</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-4.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="4" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$800</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Family House</p>
-    <a href="property/luxury-family-home.html">
-    <h4>Luxury Family Home</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> New York, United States</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 7</li>
-    <li class="list-inline-item">Baths: 4</li>
-    <li class="list-inline-item">Sq: 158 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/10.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/12/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-3.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="d-none"></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="3" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$650</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Condo</p>
-    <a href="property/luxury-family-home-1.html">
-    <h4>Luxury Family Home</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> California</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 4</li>
-    <li class="list-inline-item">Baths: 9</li>
-    <li class="list-inline-item">Sq: 104 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/16.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/12/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-2.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="2" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$900</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Condo</p>
-    <a href="property/gorgeous-villa-bay-view-1.html">
-    <h4>Gorgeous Villa Bay View</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> California</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 9</li>
-    <li class="list-inline-item">Baths: 9</li>
-    <li class="list-inline-item">Sq: 186 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/9.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="William Diana">
-    </a></li>
-     <li class="list-inline-item"><a href="agent/9.html">William Diana</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/12/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-1.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="d-none"></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="1" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$259</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Apartment</p>
-    <a href="property/renovated-apartment-1.html">
-    <h4>Renovated Apartment</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> Paris</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 10</li>
-    <li class="list-inline-item">Baths: 1</li>
-    <li class="list-inline-item">Sq: 130 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/1.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="System Admin">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/1.html">System Admin</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item cloned" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-11.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="11" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$150</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Modern Villa</p>
-    <a href="property/stay-greenwich-village.html">
-    <h4>STAY GREENWICH VILLAGE</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> California</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 8</li>
-    <li class="list-inline-item">Baths: 1</li>
-    <li class="list-inline-item">Sq: 106 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/10.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item cloned" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-10.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="10" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$250</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Town House</p>
-    <a href="property/lily-dale-village.html">
-    <h4>LILY DALE VILLAGE</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> New York, United States</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 10</li>
-    <li class="list-inline-item">Baths: 1</li>
-    <li class="list-inline-item">Sq: 168 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/1.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="System Admin">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/1.html">System Admin</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div><div class="owl-item cloned" style="width: 360px; margin-right: 30px;"><div class="item">
-    <div class="feat_property">
-    <div class="thumb">
-    <img class="img-whp" src="assets/uploads/demo/property/property-9.jpg" alt="property image">
-    <div class="thmb_cntnt">
-    <ul class="tag mb0">
-    <li class="list-inline-item"><a>For Buy</a></li>
-    <li class="list-inline-item"><a>Featured</a></li>
-    </ul>
-    <ul class="icon mb0">
-    <li class="list-inline-item"><a class="service-wishlist " data-id="9" data-type="property"><i class="fa fa-heart"></i></a></li>
-    </ul>
-    <a class="fp_price" href="#">$350</a>
-    </div>
-    </div>
-    <div class="details">
-    <div class="tc_content">
-    <p class="text-thm">Condo</p>
-    <a href="property/luxury-single.html">
-    <h4>LUXURY SINGLE</h4>
-    </a>
-    <p><span class="flaticon-placeholder"></span> Los Angeles</p>
-    <ul class="prop_details mb0">
-    <li class="list-inline-item">Beds: 9</li>
-    <li class="list-inline-item">Baths: 1</li>
-    <li class="list-inline-item">Sq: 132 sqft</li>
-    </ul>
-    </div>
-    <div class="fp_footer">
-    <ul class="fp_meta float-left mb0">
-    <li class="list-inline-item"><a href="agent/9.html">
-    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="William Diana">
-    </a></li>
-    <li class="list-inline-item"><a href="agent/9.html">William Diana</a></li>
-    </ul>
-    <div class="fp_pdate float-right">05/13/2021</div>
-    </div>
-    </div>
-    </div>
-    </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style>
-        <i class="fa fa-arrow-left"></i></div><div class="owl-next" style ><i class="fa fa-arrow-right"></i></div></div>
-        <div class="owl-dots" style><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></div>
-    </div>
+                    <div class="fp_footer">
+                    <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="agent/13.html">
+                    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Shushi Yashashree" style="width:40px; border-radius: 50%; height: 40px;">
+                    </a></li>
+                    <li class="list-inline-item"><a href="agent/13.html">Shushi Yashashree</a></li>
+                    </ul>
+                    <div class="fp_pdate float-right">05/13/2021</div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+          </ng-template>
+          <ng-template carouselSlide>
+                <div class="item" style="width: 360px; margin-right: 30px;">
+                    <div class="feat_property">
+                    <div class="thumb">
+                    <img class="img-whp" src="assets/uploads/demo/property/property-4.jpg" alt="property image">
+                    <div class="thmb_cntnt">
+                    <ul class="tag mb0">
+                    <li class="list-inline-item"><a>For Buy</a></li>
+                    <li class="list-inline-item"><a>Featured</a></li>
+                    </ul>
+                    <ul class="icon mb0">
+                    <li class="list-inline-item"><a class="service-wishlist " data-id="4" data-type="property"><i class="fa fa-heart"></i></a></li>
+                    </ul>
+                    <a class="fp_price" href="#">$800</a>
+                    </div>
+                    </div>
+                    <div class="details">
+                    <div class="tc_content">
+                    <p class="text-thm">Family House</p>
+                    <a href="property/luxury-family-home.html">
+                    <h4>Luxury Family Home</h4>
+                    </a>
+                    <p><span class="flaticon-placeholder"></span> New York, United States</p>
+                    <ul class="prop_details mb0">
+                    <li class="list-inline-item">Beds: 7</li>
+                    <li class="list-inline-item">Baths: 4</li>
+                    <li class="list-inline-item">Sq: 158 sqft</li>
+                    </ul>
+                    </div>
+                    <div class="fp_footer">
+                    <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="agent/10.html">
+                    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="Sarah Violet" style="width:40px; border-radius: 50%; height: 40px;">
+                    </a></li>
+                    <li class="list-inline-item"><a href="agent/10.html">Sarah Violet</a></li>
+                    </ul>
+                    <div class="fp_pdate float-right">05/12/2021</div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+          </ng-template>
+          <ng-template carouselSlide>
+                <div class="item" style="width: 360px; margin-right: 30px;">
+                    <div class="feat_property">
+                    <div class="thumb">
+                    <img class="img-whp" src="assets/uploads/demo/property/property-3.jpg" alt="property image">
+                    <div class="thmb_cntnt">
+                    <ul class="tag mb0">
+                    <li class="list-inline-item"><a>For Buy</a></li>
+                    <li class="d-none"></li>
+                    </ul>
+                    <ul class="icon mb0">
+                    <li class="list-inline-item"><a class="service-wishlist " data-id="3" data-type="property"><i class="fa fa-heart"></i></a></li>
+                    </ul>
+                    <a class="fp_price" href="#">$650</a>
+                    </div>
+                    </div>
+                    <div class="details">
+                    <div class="tc_content">
+                    <p class="text-thm">Condo</p>
+                    <a href="property/luxury-family-home-1.html">
+                    <h4>Luxury Family Home</h4>
+                    </a>
+                    <p><span class="flaticon-placeholder"></span> California</p>
+                    <ul class="prop_details mb0">
+                    <li class="list-inline-item">Beds: 4</li>
+                    <li class="list-inline-item">Baths: 9</li>
+                    <li class="list-inline-item">Sq: 104 sqft</li>
+                    </ul>
+                    </div>
+                    <div class="fp_footer">
+                    <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="agent/16.html">
+                    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="Elizabeth Norah" style="width:40px; border-radius: 50%; height: 40px;">
+                    </a></li>
+                    <li class="list-inline-item"><a href="agent/16.html">Elizabeth Norah</a></li>
+                    </ul>
+                    <div class="fp_pdate float-right">05/12/2021</div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+          </ng-template>
+          <ng-template carouselSlide>
+                <div class="item" style="width: 360px; margin-right: 30px;">
+                    <div class="feat_property">
+                    <div class="thumb">
+                    <img class="img-whp" src="assets/uploads/demo/property/property-2.jpg" alt="property image">
+                    <div class="thmb_cntnt">
+                    <ul class="tag mb0">
+                    <li class="list-inline-item"><a>For Buy</a></li>
+                    <li class="list-inline-item"><a>Featured</a></li>
+                    </ul>
+                    <ul class="icon mb0">
+                    <li class="list-inline-item"><a class="service-wishlist " data-id="2" data-type="property"><i class="fa fa-heart"></i></a></li>
+                    </ul>
+                    <a class="fp_price" href="#">$900</a>
+                    </div>
+                    </div>
+                    <div class="details">
+                    <div class="tc_content">
+                    <p class="text-thm">Condo</p>
+                    <a href="property/gorgeous-villa-bay-view-1.html">
+                    <h4>Gorgeous Villa Bay View</h4>
+                    </a>
+                    <p><span class="flaticon-placeholder"></span> California</p>
+                    <ul class="prop_details mb0">
+                    <li class="list-inline-item">Beds: 9</li>
+                    <li class="list-inline-item">Baths: 9</li>
+                    <li class="list-inline-item">Sq: 186 sqft</li>
+                    </ul>
+                    </div>
+                    <div class="fp_footer">
+                    <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="agent/9.html">
+                    <img class="avatar" src="assets/uploads/demo/general/avatar-3.jpg" alt="William Diana" style="width:40px; border-radius: 50%; height: 40px;">
+                    </a></li>
+                     <li class="list-inline-item"><a href="agent/9.html">William Diana</a></li>
+                    </ul>
+                    <div class="fp_pdate float-right">05/12/2021</div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+          </ng-template>
+          <ng-template carouselSlide>
+                <div class="item" style="width: 360px; margin-right: 30px;">
+                    <div class="feat_property">
+                    <div class="thumb">
+                    <img class="img-whp" src="assets/uploads/demo/property/property-1.jpg" alt="property image">
+                    <div class="thmb_cntnt">
+                    <ul class="tag mb0">
+                    <li class="list-inline-item"><a>For Buy</a></li>
+                    <li class="d-none"></li>
+                    </ul>
+                    <ul class="icon mb0">
+                    <li class="list-inline-item"><a class="service-wishlist " data-id="1" data-type="property"><i class="fa fa-heart"></i></a></li>
+                    </ul>
+                    <a class="fp_price" href="#">$259</a>
+                    </div>
+                    </div>
+                    
+                    <div class="details">
+                    <div class="tc_content">
+                    <p class="text-thm">Apartment</p>
+                    <a href="property/renovated-apartment-1.html">
+                    <h4>Renovated Apartment</h4>
+                    </a>
+                    <p><span class="flaticon-placeholder"></span> Paris</p>
+                    <ul class="prop_details mb0">
+                    <li class="list-inline-item">Beds: 10</li>
+                    <li class="list-inline-item">Baths: 1</li>
+                    <li class="list-inline-item">Sq: 130 sqft</li>
+                    </ul>
+                    </div>
+                    <div class="fp_footer">
+                    <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="agent/1.html">
+                    <img class="avatar" src="assets/uploads/demo/general/avatar.jpg" alt="System Admin" style="width:40px; border-radius: 50%; height: 40px;">
+                    </a></li>
+                    <li class="list-inline-item"><a href="agent/1.html">System Admin</a></li>
+                    </ul>
+                    <div class="fp_pdate float-right">05/13/2021</div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+          </ng-template>
+      </owl-carousel-o>
 </div>
 </div>
-</section><section id="property-city" class="property-city pb30">
+</div>
+</section>
+<section id="property-city" class="property-city pb30">
 <div class="container">
 <div class="row">
 <div class="col-lg-6 offset-lg-3">
@@ -1042,104 +814,69 @@ the best prices on</p>
 </div>
 <div class="row">
 <div class="col-lg-6 offset-lg-3">
-    <div class="testimonial_grid_slider owl-carousel owl-theme owl-loaded">
-        <div class="owl-stage-outer">
-            <div class="owl-stage" style="transform: translate3d(-1140px, 0px, 0px); transition: all 0s ease 0s; width: 3990px;">
-                <div class="owl-item cloned" style="width: 555px; margin-right: 15px;">
-                    <div class="item">
-                        <div class="testimonial_grid">
-                            <div class="thumb">
-                                <img src="assets/uploads/demo/general/avatar-2.jpg" alt="Donald Wolf">
-                            </div>
-                            <div class="details">
-                                <h4>Donald Wolf</h4>
-                                <p>Sale Manager</p>
-                                <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. </p>
-                            </div>
-                        </div>
-                    </div>
+<div class="testimonial_grid_slider">
+<!-- <owl-carousel [options]="homeSlider2" [carouselClasses]="['owl-theme','customClassName']"> -->
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            <div class="owl-item" style="width: 555px; margin-right: 15px;">
+                <div class="testimonial_grid">
+                <div class="thumb">
+                <img src="assets/uploads/demo/general/avatar.jpg" alt="Eva Hicks" style="border: 10px solid rgba(255,255,255,.1);
+                border-radius: 50%;
+                display: inline;
+                height: 114px;
+                width: 114px;">
                 </div>
-                <div class="owl-item cloned" style="width: 555px; margin-right: 15px;">
-                    <div class="item">
-        <div class="testimonial_grid">
-        <div class="thumb">
-        <img src="assets/uploads/demo/general/avatar-3.jpg" alt="Charlie Harrington">
-        </div>
-        <div class="details">
-        <h4>Charlie Harrington</h4>
-        <p>Sale Manager</p>
-        <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui.</p>
-        </div>
-        </div>
-        </div></div><div class="owl-item" style="width: 555px; margin-right: 15px;"><div class="item">
-        <div class="testimonial_grid">
-        <div class="thumb">
-        <img src="assets/uploads/demo/general/avatar.jpg" alt="Eva Hicks">
-        </div>
-        <div class="details">
-        <h4>Eva Hicks</h4>
-        <p>Sale Manager</p>
-        <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. </p>
-        </div>
-        </div>
-        </div></div><div class="owl-item" style="width: 555px; margin-right: 15px;"><div class="item">
-        <div class="testimonial_grid">
-        <div class="thumb">
-        <img src="assets/uploads/demo/general/avatar-2.jpg" alt="Donald Wolf">
-        </div>
-        <div class="details">
-        <h4>Donald Wolf</h4>
-        <p>Sale Manager</p>
-        <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. </p>
-        </div>
-        </div>
-        </div></div><div class="owl-item" style="width: 555px; margin-right: 15px;"><div class="item">
-        <div class="testimonial_grid">
-        <div class="thumb">
-        <img src="assets/uploads/demo/general/avatar-3.jpg" alt="Charlie Harrington">
-        </div>
-        <div class="details">
-        <h4>Charlie Harrington</h4>
-        <p>Sale Manager</p>
-        <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui.</p>
-        </div>
-        </div>
-        </div></div><div class="owl-item cloned" style="width: 555px; margin-right: 15px;"><div class="item">
-        <div class="testimonial_grid">
-        <div class="thumb">
-        <img src="assets/uploads/demo/general/avatar.jpg" alt="Eva Hicks">
-        </div>
-        <div class="details">
-        <h4>Eva Hicks</h4>
-        <p>Sale Manager</p>
-        <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. </p>
-        </div>
-        </div>
-        </div></div><div class="owl-item cloned" style="width: 555px; margin-right: 15px;"><div class="item">
-        <div class="testimonial_grid">
-        <div class="thumb">
-        <img src="assets/uploads/demo/general/avatar-2.jpg" alt="Donald Wolf">
-        </div>
-        <div class="details">
-        <h4>Donald Wolf</h4>
-        <p>Sale Manager</p>
-        <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. </p>
-        </div>
-        </div>
-        </div></div></div></div>
-        <div class="owl-controls">
-            <div class="owl-nav">
-            <div class="owl-prev"><i class="fa fa-arrow-left"></i></div>
-            <div class="owl-next"><i class="fa fa-arrow-right"></i></div></div>
-            <div class="owl-dots"><div class="owl-dot active"><span></span></div>
-            <div class="owl-dot"><span></span></div>
-            <div class="owl-dot"><span></span></div></div>
-        </div>
-        </div>
+                <div class="details">
+                <h4>Eva Hicks</h4>
+                <p>Sale Manager</p>
+                <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. </p>
+                </div>
+                </div>
+                </div>
+        </ng-template>  
+        <ng-template carouselSlide>
+            
+<div class="owl-item" style="width: 555px; margin-right: 15px;">
+    <div class="testimonial_grid">
+    <div class="thumb">
+    <img src="assets/uploads/demo/general/avatar-2.jpg" alt="Donald Wolf" style="border: 10px solid rgba(255,255,255,.1);
+    border-radius: 50%;
+    display: inline;
+    height: 114px;
+    width: 114px;">
     </div>
+    <div class="details">
+    <h4>Donald Wolf</h4>
+    <p>Sale Manager</p>
+    <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui. </p>
+    </div>
+    </div>
+    </div>
+        </ng-template>  
+        <ng-template carouselSlide>
+            <div class="owl-item" style="width: 555px; margin-right: 15px;">
+            <div class="testimonial_grid">
+            <div class="thumb">
+            <img src="assets/uploads/demo/general/avatar-3.jpg" alt="Charlie Harrington" style="border: 10px solid rgba(255,255,255,.1);
+            border-radius: 50%;
+            display: inline;
+            height: 114px;
+            width: 114px;">
+            </div>
+            <div class="details">
+            <h4>Charlie Harrington</h4>
+            <p>Sale Manager</p>
+            <p class="mt25">Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui.</p>
+            </div>
+            </div>
+            </div></ng-template>  
+      </owl-carousel-o>
 </div>
 </div>
-    </section>
+</div>
+</div>
+</section>
 
 <section class="our-blog bgc-f7 pb30">
 <div class="container">
@@ -1247,68 +984,32 @@ Modern Villa
 </div>
 <div class="col-lg-4">
 <div class="parner_reg_btn text-right tac-smd">
-<a class="btn btn-thm2" routerLink="/register">Register Now</a>
+<a class="btn btn-thm2" href="#">Register Now</a>
 </div>
 </div>
 </div>
 </div>
 </section>
 </div>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 <script>
-//    $('.owl-carousel').owlCarousel({
-//     loop:true,
-//     margin:10,
-//     responsiveClass:true,
-//     responsive:{
-//         0:{
-//             items:1,
-//             nav:true
-//         },
-//         600:{
-//             items:3,
-//             nav:false
-//         },
-//         1000:{
-//             items:5,
-//             nav:true,
-//             loop:false
-//         }
-//     }
-// })
-
-// $('.owl-carousel').owlCarousel({
-//     loop:true,
-//     margin:10,
-//     nav:true,
-//     responsive:{
-//         0:{
-//             items:1
-//         },
-//         600:{
-//             items:3
-//         },
-//         1000:{
-//             items:5
-//         }
-//     }
-// })
-$('.owl-carousel').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  autoplay: true,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 3
-    },
-    1000: {
-      items: 5
+    $('.owl-carousel').owlCarousel({
+    rtl:true,
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
     }
-  }
 })
-</script>
+</script> -->
 <app-footer></app-footer>

@@ -1,86 +1,97 @@
 <app-header></app-header>
-<div class="container">
-<div class="row justify-content-center bravo-login-form-page bravo-login-page">
-<div class="col-md-5">
-<div class="">
-<h4 class="form-title">Register</h4>
-<form class="form bravo-form-register" method="post" [formGroup]="registerForm" novalidate>
-<input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> <div class="row">
-<div class="col-lg-6 col-md-12">
-<div class="form-group">
-<input type="fname" class="form-control" name="first_name" autocomplete="off" placeholder="First Name" formControlName="fname">
-<i class="input-icon field-icon fa"><img src="images/ico_fullname_signup.svg"></i>
-<div class="alert alert-danger" *ngIf="isValidInput('fname')">
-    <div *ngIf="registerForm.controls['fname'].errors?.required">
-        First Name is required.
+    <div class="container">
+        <div class="row justify-content-center bravo-login-form-page bravo-login-page">
+            <div class="col-md-5">
+                <div class="">
+                    <h4 class="form-title">Register</h4>
+                    <form class="form bravo-form-register" method="post" [formGroup]="registerForm" novalidate (ngSubmit)="submitForm()">
+                        <input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> 
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="fname" class="form-control" name="first_name" autocomplete="off" placeholder="First Name" formControlName="fname">
+                                    <i class="input-icon field-icon fa">
+                                    <!-- <img src="images/ico_fullname_signup.svg"> -->
+                                    </i>
+                                    <div class="alert alert-danger" *ngIf="isValidInput('fname')">
+                                        <div *ngIf="registerForm.controls['fname'].errors?.required">
+                                            First Name is required.
+                                        </div>
+                                        <div *ngIf="registerForm.controls['fname'].errors?.minlength">
+                                            At least 3 charcter is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="lname" class="form-control" name="last_name" autocomplete="off" placeholder="Last Name" formControlName="lname">
+                                    <i class="input-icon field-icon fa">
+                                    <!-- <img src="images/ico_fullname_signup.svg"> -->
+                                    </i>
+                                    <div class="alert alert-danger" *ngIf="isValidInput('lname')">
+                                        <div *ngIf="registerForm.controls['lname'].errors?.required">
+                                            Last Name is required.
+                                        </div>
+                                        <div *ngIf="registerForm.controls['lname'].errors?.minlength">
+                                            At least 3 charcter is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" autocomplete="off" placeholder="Email address" formControlName="email"> 
+                            <i class="input-icon field-icon fa">
+                           <!-- <img src="images/ico_email_login_form.svg"> -->
+                            </i>
+                            <div class="alert alert-danger" *ngIf="isValidInput('email')">
+                                <div *ngIf="registerForm.controls['email'].errors?.required">
+                                    Email is required.
+                                </div>
+                                <div *ngIf="registerForm.controls['email'].errors?.pattern">
+                                    Invalid format.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" autocomplete="off" placeholder="Password" formControlName="password">
+                            <i class="input-icon field-icon fa">
+                            <!-- <img src="images/ico_pass_login_form.svg"> -->
+                            </i>
+                            <div class="alert alert-danger" *ngIf="isValidInput('password')">
+                                <div *ngIf="registerForm.controls['password'].errors?.required">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="term">
+                            <input id="term" type="checkbox" name="term" class="mr5" formControlName="checkbox">
+                                I have read and accept the 
+                                <a href='#' target='_blank'>Terms and Privacy Policy</a>
+                                <span class="checkmark fcheckbox"></span>
+                            </label>
+                            <div class="alert alert-danger" *ngIf="isValidInput('checkbox')">
+                                <div *ngIf="registerForm.controls['checkbox'].errors?.required">
+                                    Plaese Check.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="error message-error invalid-feedback"></div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary form-submit" (click)="onClick()" [disabled]="!registerForm.valid">
+                                Sign Up
+                                <span class="spinner-grow spinner-grow-sm icon-loading" role="status" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="c-grey f14 text-center">
+                            Already have an account?
+                            <a href="#" data-target="#login" data-toggle="modal">Log In</a>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
     </div>
-    <div *ngIf="registerForm.controls['fname'].errors?.minlength">
-        At least 3 charcter is required.
-    </div>
-</div>
-</div>
-</div>
-<div class="col-lg-6 col-md-12">
-<div class="form-group">
-<input type="lname" class="form-control" name="last_name" autocomplete="off" placeholder="Last Name" formControlName="lname">
-<i class="input-icon field-icon fa"><img src="images/ico_fullname_signup.svg"></i>
-<div class="alert alert-danger" *ngIf="isValidInput('lname')">
-    <div *ngIf="registerForm.controls['lname'].errors?.required">
-        Last Name is required.
-    </div>
-    <div *ngIf="registerForm.controls['lname'].errors?.minlength">
-        At least 3 charcter is required.
-    </div>
-</div>
-</div>
-</div>
-</div>
-<div class="form-group">
-<input type="email" class="form-control" name="email" autocomplete="off" placeholder="Email address" formControlName="email"> 
-<i class="input-icon field-icon fa"><img src="images/ico_email_login_form.svg"></i>
-<div class="alert alert-danger" *ngIf="isValidInput('email')">
-    <div *ngIf="registerForm.controls['email'].errors?.required">
-        Email is required.
-    </div>
-    <div *ngIf="registerForm.controls['email'].errors?.pattern">
-        Invalid format.
-    </div>
-</div>
-</div>
-<div class="form-group">
-<input type="password" class="form-control" name="password" autocomplete="off" placeholder="Password" formControlName="password">
-<i class="input-icon field-icon fa"><img src="images/ico_pass_login_form.svg"></i>
-<div class="alert alert-danger" *ngIf="isValidInput('password')">
-    <div *ngIf="registerForm.controls['password'].errors?.required">
-        Password is required.
-    </div>
-</div>
-</div>
-<div class="form-group">
-<label for="term">
-<input id="term" type="checkbox" name="term" class="mr5" formControlName="checkbox">
-I have read and accept the <a href='#' target='_blank'>Terms and Privacy Policy</a>
-<span class="checkmark fcheckbox"></span>
-</label>
-<div class="alert alert-danger" *ngIf="isValidInput('checkbox')">
-    <div *ngIf="registerForm.controls['checkbox'].errors?.required">
-        Plaese Check.
-    </div>
-</div>
-</div>
-<div class="error message-error invalid-feedback"></div>
-<div class="form-group">
-<button type="submit" class="btn btn-primary form-submit" (click)="onClick()" [disabled]="!registerForm.valid">
-Sign Up
-<span class="spinner-grow spinner-grow-sm icon-loading" role="status" aria-hidden="true"></span>
-</button>
-</div>
-<div class="c-grey f14 text-center">
-Already have an account?
-<a href="#" data-target="#login" data-toggle="modal">Log In</a>
-</div>
-</form> </div>
-</div>
-</div>
-</div>
 <app-footer></app-footer>

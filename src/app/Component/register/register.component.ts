@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core'; 
 import {FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-register',
@@ -12,8 +14,12 @@ export class RegisterComponent{
   fname: string = "";
   lname: string= "";
   email: string="";
-
-  constructor(private fb : FormBuilder) { 
+  data: any=[];
+  http: any;
+    constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient) { 
+      this.api.getData().subscribe(data=>{
+        console.warn(data);
+      });
     this.registerForm = this.fb.group({
       fname: ['', [Validators.required, Validators.minLength(3)]],
       lname: ['', [Validators.required, Validators.minLength(3)]],
@@ -29,8 +35,21 @@ export class RegisterComponent{
 
   ngOnInit(): void {
   }
+
   onClick(){
-    console.log(this.registerForm.value);
+    console.warn(this.registerForm.value);
     this.registerForm.reset();
+  }
+
+  submitForm() {
+    var formData: any = new FormData();
+    formData.append("fname", this.registerForm.get('fname').value);
+    formData.append("email", this.registerForm.get('email').value);
+    formData.append("password", this.registerForm.get('password').value);
+
+    this.httpClient.post<any>('http://imginfotech.in/propira/api/registration', formData).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err)
+    );
   }
 }
