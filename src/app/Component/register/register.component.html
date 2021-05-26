@@ -3,12 +3,13 @@
         <div class="row justify-content-center bravo-login-form-page bravo-login-page">
             <div class="col-md-5">
                 <div class="">
-                    <h4 class="form-title">Register</h4>
                     <form class="form bravo-form-register" 
                     method="post" 
                     action="http://imginfotech.in/propira/api/registration"
                     [formGroup]="registerForm" 
+                    *ngIf ="isShown"
                     novalidate (ngSubmit)="submitForm()">
+                    <h4 class="form-title">Register</h4>
                         <input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> 
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
@@ -73,6 +74,7 @@
                                 <div *ngIf="registerForm.controls['phonenumber'].errors?.required">
                                     Mobile number is required.
                                 </div>
+                        
                                 <div *ngIf="registerForm.controls['phonenumber'].errors?.pattern">
                                     Letters are not allowed.
                                 </div>
@@ -94,6 +96,9 @@
                             <div class="alert alert-danger" *ngIf="isValidInput('password')">
                                 <div *ngIf="registerForm.controls['password'].errors?.required">
                                     Password is required.
+                                </div>
+                                <div *ngIf="registerForm.controls['password'].errors?.minlength">
+                                    Minimum 6 characters are required.
                                 </div>
                             </div>
                         </div>
@@ -122,8 +127,48 @@
                             <a href="#" data-target="#login" data-toggle="modal">Log In</a>
                         </div>
                     </form> 
+                    <form class="login100-form validate-form ng-untouched ng-pristine ng-star-inserted ng-invalid" 
+                    id="verifyOtp" method="post" name="verifyotp" novalidate="" style="position: relative;"
+                    *ngIf="show">
+                        <h4 class="text-center"><b>Verify</b></h4>
+                        <div class="wrap-input100">
+                            <label class="text-center">OTP has been sent to your mobile {{person.mobile}}, please enter same here to verify.</label>
+                        </div>
+                        <div class="row otpVerify" style="margin: 0;">
+                            <div class="wrap-input100 col-md-2 col-2">
+                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass1" maxlength="1" name="pass1" required="" size="1" type="tel">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass2" maxlength="1" name="pass2" required="" size="1" type="tel">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass3" maxlength="1" name="pass3" required="" size="1" type="tel">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass4" maxlength="1" name="pass4" required="" size="1" type="tel">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass5" maxlength="1" name="pass5" required="" size="1" type="tel">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass6" maxlength="1" name="pass6" required="" size="1" type="tel">
+                                <span class="focus-input100"></span>
+                            </div>
+                        </div>
+                        <p class="one_time_password text-danger" style="cursor:pointer; margin:0px; font-size: 12px;float:right; color:red;">RESEND (OTP)</p>
+                        <div class="row justify-content-center" style="margin-top: 15px; margin-left: 80px;">
+                            <button type="submit" class="btn btn-primary submit" (click)="submit">
+                                Verify
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
+        </div>    
     </div>
 <app-footer></app-footer>
