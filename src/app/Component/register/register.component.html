@@ -63,6 +63,28 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <input type="phonenumber" class="form-control" name="phonenumber" autocomplete="off" placeholder="Mobile number" 
+                            formControlName="phonenumber"
+                            [(ngModel)]="person.mobile">
+                            <i class="input-icon field-icon fa">
+                            <!-- <img src="images/ico_email_login_form.svg"> -->
+                            </i>
+                            <div class="alert alert-danger" *ngIf="isValidInput('phonenumber')">
+                                <div *ngIf="registerForm.controls['phonenumber'].errors?.required">
+                                    Mobile number is required.
+                                </div>
+                                <div *ngIf="registerForm.controls['phonenumber'].errors?.pattern">
+                                    Letters are not allowed.
+                                </div>
+                                <div *ngIf="registerForm.controls['phonenumber'].errors?.minlength">
+                                    Must contain 10 digits.
+                                </div>
+                                <div *ngIf="registerForm.controls['phonenumber'].errors?.maxlength">
+                                    Must Contain 10 digits.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <input type="password" class="form-control" name="password" autocomplete="off" placeholder="Password" 
                             formControlName="password"
                             [(ngModel)]="person.password">

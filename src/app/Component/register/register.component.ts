@@ -24,6 +24,7 @@ export class RegisterComponent{
       lname: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')]],
       password: ['', Validators.required],
+      phonenumber:['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('^[1-9][0-9]*$')]],
       checkbox: [false, Validators.requiredTrue],
     });
   }
@@ -48,7 +49,7 @@ export class RegisterComponent{
     this.api.addData(this.person)
       .subscribe(data => {
         console.warn(data)
-        // this.refreshData();
+        // this.refreshData();  
       })      
       console.warn(this.registerForm.value);
       this.registerForm.reset();
