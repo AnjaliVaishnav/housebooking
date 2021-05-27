@@ -83,5 +83,5 @@ export class RegisterComponent{
       .subscribe((data: any) => {
         console.log(data);
       });
- 
+    }
 }
