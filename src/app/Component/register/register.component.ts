@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component } from '@angular/core'; 
 import {FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService} from 'src/app/api.service';
@@ -19,6 +19,7 @@ export class RegisterComponent{
   person = new Data();
   isShown: boolean = true ;
   show: boolean = false;
+  otpVerify: FormGroup;
 
     constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient) { 
     this.registerForm = this.fb.group({
@@ -26,7 +27,7 @@ export class RegisterComponent{
       lname: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      phonenumber:['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('^[1-9][0-9]*$')]],
+      mobile:['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('^[1-9][0-9]*$')]],
       checkbox: [false, Validators.requiredTrue],
     });
   }
@@ -77,5 +78,10 @@ export class RegisterComponent{
   submit(){
     
   }
+  getDataOtp() {
+    this.api.getData()
+      .subscribe((data: any) => {
+        console.log(data);
+      });
  
 }

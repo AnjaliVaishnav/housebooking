@@ -24,6 +24,9 @@ export class ApiService {
       console.log('getData '+this.url + 'registration')
       return this.http.get<Data[]>(this.url + 'registration')
     }
+    getDataOtp(otp: any): Observable<any> {
+      return this.http.get<Data[]>(this.url + otp).pipe();
+    }
    
     addData(person:Data): Observable<any> {
       const headers = { 'content-type': 'application/json'}  

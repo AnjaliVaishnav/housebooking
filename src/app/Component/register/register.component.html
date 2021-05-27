@@ -64,24 +64,25 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="phonenumber" class="form-control" name="phonenumber" autocomplete="off" placeholder="Mobile number" 
-                            formControlName="phonenumber"
-                            [(ngModel)]="person.mobile">
+                            <input type="mobile" class="form-control" name="mobile" autocomplete="off" placeholder="Mobile number" 
+                            formControlName="mobile"
+                            [(ngModel)]="person.mobile"
+                            #mobile>
                             <i class="input-icon field-icon fa">
                             <!-- <img src="images/ico_email_login_form.svg"> -->
                             </i>
-                            <div class="alert alert-danger" *ngIf="isValidInput('phonenumber')">
-                                <div *ngIf="registerForm.controls['phonenumber'].errors?.required">
+                            <div class="alert alert-danger" *ngIf="isValidInput('mobile')">
+                                <div *ngIf="registerForm.controls['mobile'].errors?.required">
                                     Mobile number is required.
                                 </div>
                         
-                                <div *ngIf="registerForm.controls['phonenumber'].errors?.pattern">
+                                <div *ngIf="registerForm.controls['mobile'].errors?.pattern">
                                     Letters are not allowed.
                                 </div>
-                                <div *ngIf="registerForm.controls['phonenumber'].errors?.minlength">
+                                <div *ngIf="registerForm.controls['mobile'].errors?.minlength">
                                     Must contain 10 digits.
                                 </div>
-                                <div *ngIf="registerForm.controls['phonenumber'].errors?.maxlength">
+                                <div *ngIf="registerForm.controls['mobile'].errors?.maxlength">
                                     Must Contain 10 digits.
                                 </div>
                             </div>
@@ -126,47 +127,54 @@
                             Already have an account?
                             <a href="#" data-target="#login" data-toggle="modal">Log In</a>
                         </div>
-                    </form> 
+                    </form>
+                     
+
+
+
+
                     <form class="login100-form validate-form ng-untouched ng-pristine ng-star-inserted ng-invalid" 
                     id="verifyOtp" method="post" name="verifyotp" novalidate="" style="position: relative;"
-                    *ngIf="show">
+                    *ngIf="show" [formGroup]="otpVerify">
                         <h4 class="text-center"><b>Verify</b></h4>
                         <div class="wrap-input100">
                             <label class="text-center">OTP has been sent to your mobile {{person.mobile}}, please enter same here to verify.</label>
                         </div>
                         <div class="row otpVerify" style="margin: 0;">
-                            <div class="wrap-input100 col-md-2 col-2">
+                            <div class="wrap-input100 col-md-2 col-2 form-group">
                                 <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass1" maxlength="1" name="pass1" required="" size="1" type="tel">
                                 <span class="focus-input100"></span>
                             </div>
-                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
                                 <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass2" maxlength="1" name="pass2" required="" size="1" type="tel">
                                 <span class="focus-input100"></span>
                             </div>
-                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
                                 <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass3" maxlength="1" name="pass3" required="" size="1" type="tel">
                                 <span class="focus-input100"></span>
                             </div>
-                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
                                 <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass4" maxlength="1" name="pass4" required="" size="1" type="tel">
                                 <span class="focus-input100"></span>
                             </div>
-                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
                                 <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass5" maxlength="1" name="pass5" required="" size="1" type="tel">
                                 <span class="focus-input100"></span>
                             </div>
-                            <div class="wrap-input100 col-md-2 col-2" style="padding: 0;">
+                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
                                 <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass6" maxlength="1" name="pass6" required="" size="1" type="tel">
                                 <span class="focus-input100"></span>
                             </div>
                         </div>
                         <p class="one_time_password text-danger" style="cursor:pointer; margin:0px; font-size: 12px;float:right; color:red;">RESEND (OTP)</p>
-                        <div class="row justify-content-center" style="margin-top: 15px; margin-left: 80px;">
+                        <div class="row justify-content-center " style="margin-top: 15px; margin-left: 80px;">
                             <button type="submit" class="btn btn-primary submit" (click)="submit">
                                 Verify
                             </button>
                         </div>
+                        
                     </form>
+                    {{this.otpVerify.value | json}}
                 </div>
             </div>
         </div>    
