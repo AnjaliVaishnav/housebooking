@@ -25,7 +25,7 @@ export class ApiService {
       return this.http.get<Data[]>(this.url + 'registration')
     }
     getDataOtp(otp: any): Observable<any> {
-      return this.http.get<Data[]>(this.url + otp).pipe();
+      return this.http.get<Data[]>('http://imginfotech.in/propira/api/sendOtp' + otp).pipe();
     }
    
     addData(person:Data): Observable<any> {
