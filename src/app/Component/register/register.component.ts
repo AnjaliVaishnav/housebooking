@@ -19,7 +19,8 @@ export class RegisterComponent{
   person = new Data();
   isShown: boolean = true ;
   show: boolean = false;
-  otpVerify: FormGroup;
+  values = "";  
+  OTP = "";
 
     constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient) { 
     this.registerForm = this.fb.group({
@@ -35,18 +36,21 @@ export class RegisterComponent{
     return this.registerForm.controls[value].invalid &&
      (this.registerForm.controls[value].dirty || this.registerForm.controls[value].touched);
  }
-
   ngOnInit(): void {
     this.refreshData()
   }
-
   refreshData() {
     this.api.getData()
       .subscribe(data => {
-        console.warn(data)
+        // console.warn(data)
         this.people=data;
       })      
- 
+      this.api.getDataOtp(this.OTP)
+      .subscribe(data => {
+        console.warn(data)
+        this.people=data;
+        // JSON.stringify(this.api.getDataOtp);
+      })     
   }
   addData() {
     this.api.addData(this.person)
@@ -54,7 +58,7 @@ export class RegisterComponent{
         console.warn(data)
         // this.refreshData();  
       })      
-      console.warn(this.registerForm.value);
+      // console.warn(this.registerForm.value);
       this.registerForm.reset();
       this.isShown = !this.isShown;
       this.show = !this.show;
@@ -63,25 +67,38 @@ export class RegisterComponent{
   //   console.warn(this.registerForm.value);
   //   this.registerForm.reset();
   // }
-
   // submitForm() {
   //   var formData: any = new FormData();
   //   formData.append("fname", this.registerForm.get('fname').value);
   //   formData.append("email", this.registerForm.get('email').value);
   //   formData.append("password", this.registerForm.get('password').value);
-
   //   this.httpClient.post<any>('http://imginfotech.in/propira/api/registration', formData).subscribe(
   //     (res) => console.log(res),
   //     (err) => console.log(err)
   //   );
   // }
-  submit(){
-    
+
+  submit(){}
+
+  // getDataOtp() {
+  //   this.api.getDataOtp()
+  //     .subscribe(data => {
+  //       console.warn(data)
+  //       this.people=data;
+  //     })         
+      
+  // }
+  onKey(event: any) {
+    this.values += event.target.value ;
+    // JSON.stringify(this.values);
   }
-  getDataOtp() {
-    this.api.getData()
-      .subscribe((data: any) => {
-        console.log(data);
-      });
+
+  onClick() {
+    if (this.values != JSON.stringify(this.api.getDataOtp)) {
+      alert('Incorrect OTP');
     }
+    else {
+      alert('Verification successful! Please login.');
+    }
+}
 }

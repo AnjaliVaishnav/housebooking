@@ -17,6 +17,7 @@ export class IndexComponent implements OnInit {
     dots: true,
     // navSpeed: 600,
     navText: ['&#8249', '&#8250;'],
+    
     responsive: {
       0: {
         items: 1 
@@ -32,7 +33,9 @@ export class IndexComponent implements OnInit {
       }
     },
     nav: true
+    
   }
+  
 
 }
   // homeSlider={items: 3,dots: true,nav: true};

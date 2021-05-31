@@ -1,4 +1,5 @@
 <app-header></app-header>
+<body>
     <div class="container">
         <div class="row justify-content-center bravo-login-form-page bravo-login-page">
             <div class="col-md-5">
@@ -128,55 +129,106 @@
                             <a href="#" data-target="#login" data-toggle="modal">Log In</a>
                         </div>
                     </form>
-                     
-
-
-
-
-                    <form class="login100-form validate-form ng-untouched ng-pristine ng-star-inserted ng-invalid" 
-                    id="verifyOtp" method="post" name="verifyotp" novalidate="" style="position: relative;"
-                    *ngIf="show" [formGroup]="otpVerify">
-                        <h4 class="text-center"><b>Verify</b></h4>
-                        <div class="wrap-input100">
-                            <label class="text-center">OTP has been sent to your mobile {{person.mobile}}, please enter same here to verify.</label>
+                    <form action=""  method="POST" novalidate *ngIf="show" #otpVerify>
+                        <div id="wrapper" class="col-md-12">
+                            <div id="dialog">
+                              <h4 class="text-center"><b>Verify</b></h4>
+                              <label class="text-center">OTP has been sent to your mobile {{person.mobile}}, please enter same here to verify.</label>
+                              <div class="row" style="margin-left: 50px;">
+                                <div class="form-group">
+                                    <input type="text" 
+                                    class="form-control"
+                                    formContorlName="otp"
+                                    maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)" />
+                                   </div>
+                                   <div class="form-group">
+                                    <input type="text"
+                                    class="form-control"
+                                    formContorlName="otp1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)" />
+                                   </div>
+                                   <div class="form-group">
+                                    <input type="text" 
+                                    class="form-control"
+                                    formContorlName="otp2"maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
+                                   </div>
+                                   <div class="form-group">
+                                    <input type="text" 
+                                    class="form-control"
+                                    formContorlName="otp3"maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
+                                   </div>
+                                   <div class="form-group">
+                                    <input type="text" 
+                                    class="form-control"
+                                    formContorlName="otp4"maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
+                                   </div>
+                                   <div class="form-group">
+                                    <input type="text"
+                                    class="form-control"
+                                    formContorlName="otp5" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
+                                   </div>
+                                </div>
+                                <div class="row" style="margin-left: 170px;">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-embossed" (click)="onClick(otpVerify.value)">Verify</button>
+                                    </div>
+                                </div>
+                                <p>You entered: - {{values}}  </p>
+                                <div>
+                                     Didn't receive the code?<br/>
+                                    <a href="#">Send code again</a><br />
+                                </div>
+                            </div>  
                         </div>
-                        <div class="row otpVerify" style="margin: 0;">
-                            <div class="wrap-input100 col-md-2 col-2 form-group">
-                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass1" maxlength="1" name="pass1" required="" size="1" type="tel">
-                                <span class="focus-input100"></span>
-                            </div>
-                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
-                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass2" maxlength="1" name="pass2" required="" size="1" type="tel">
-                                <span class="focus-input100"></span>
-                            </div>
-                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
-                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass3" maxlength="1" name="pass3" required="" size="1" type="tel">
-                                <span class="focus-input100"></span>
-                            </div>
-                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
-                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass4" maxlength="1" name="pass4" required="" size="1" type="tel">
-                                <span class="focus-input100"></span>
-                            </div>
-                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
-                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass5" maxlength="1" name="pass5" required="" size="1" type="tel">
-                                <span class="focus-input100"></span>
-                            </div>
-                            <div class="wrap-input100 col-md-2  form-group" style="padding: 0;">
-                                <input class="input100 change ng-untouched ng-pristine ng-invalid" id="pass6" maxlength="1" name="pass6" required="" size="1" type="tel">
-                                <span class="focus-input100"></span>
-                            </div>
-                        </div>
-                        <p class="one_time_password text-danger" style="cursor:pointer; margin:0px; font-size: 12px;float:right; color:red;">RESEND (OTP)</p>
-                        <div class="row justify-content-center " style="margin-top: 15px; margin-left: 80px;">
-                            <button type="submit" class="btn btn-primary submit" (click)="submit">
-                                Verify
-                            </button>
-                        </div>
-                        
-                    </form>
-                    {{this.otpVerify.value | json}}
+                    </form>   
                 </div>
             </div>
         </div>    
     </div>
+    <script>
+    $(function() {
+        'use strict';
+        var body = $('body');
+      
+        function goToNextInput(e) {
+          var key = e.which,
+            t = $(e.target),
+            sib = t.next('input');
+      
+          if (key != 9 && (key < 48 || key > 57)) {
+            e.preventDefault();
+            return false;
+          }
+      
+          if (key === 9) {
+            return true;
+          }
+      
+          if (!sib || !sib.length) {
+            sib = body.find('input').eq(0);
+          }
+          sib.select().focus();
+        }
+      
+        function onKeyDown(e) {
+          var key = e.which;
+      
+          if (key === 9 || (key >= 48 && key <= 57)) {
+            return true;
+          }
+      
+          e.preventDefault();
+          return false;
+        }
+        
+        function onFocus(e) {
+          $(e.target).select();
+        }
+      
+        body.on('keyup', 'input', goToNextInput);
+        body.on('keydown', 'input', onKeyDown);
+        body.on('click', 'input', onFocus);
+      
+      })
+      </script>
+    </body>   
 <app-footer></app-footer>

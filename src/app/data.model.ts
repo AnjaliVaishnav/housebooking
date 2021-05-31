@@ -7,5 +7,5 @@ export class Data {
     is_registration: string ="0";
     user_type:string="1";
     type: string="Web";
-    otp: number;
+    OTP: any;
 }
