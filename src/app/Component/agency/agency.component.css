@@ -1,3 +1,6 @@
 .owl-theme{
     z-index: 0;
 }
+.owl-stage{
+    transform: translate3d(-626px, 0px, 0px); transition: all 0s ease 0s; width: 3756px;
+}

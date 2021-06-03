@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Component } from '@angular/core'; 
-import {FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, ViewChildren, ElementRef, ViewChild  } from '@angular/core'; 
+import {FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { ApiService} from 'src/app/api.service';
 import { Data } from 'src/app/data.model';
 
@@ -18,10 +18,12 @@ export class RegisterComponent{
   people:Data[];
   person = new Data();
   isShown: boolean = true ;
-  show: boolean = false;
-  values = "";  
+  show: boolean = true;
+  values = "";
+  otp: string;
   OTP = "";
-
+  showOtpComponent = true;
+  @ViewChild('ngOtpInput', { static: false}) ngOtpInput: any;
     constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient) { 
     this.registerForm = this.fb.group({
       fname: ['', [Validators.required, Validators.minLength(3)]],
@@ -32,6 +34,17 @@ export class RegisterComponent{
       checkbox: [false, Validators.requiredTrue],
     });
   }
+  config = {
+    allowNumbersOnly: false,
+    length: 6,
+    isPasswordInput: false,
+    disableAutoFocus: false,
+    placeholder: '',
+    inputStyles: {
+      'width': '50px',
+      'height': '50px'
+    }
+  };
   isValidInput(value:any){
     return this.registerForm.controls[value].invalid &&
      (this.registerForm.controls[value].dirty || this.registerForm.controls[value].touched);
@@ -42,63 +55,40 @@ export class RegisterComponent{
   refreshData() {
     this.api.getData()
       .subscribe(data => {
-        // console.warn(data)
-        this.people=data;
+        this.people=data; 
       })      
-      this.api.getDataOtp(this.OTP)
+      this.api.getDataOtp(this.otp)
       .subscribe(data => {
         console.warn(data)
         this.people=data;
-        // JSON.stringify(this.api.getDataOtp);
+        // const body = JSON.stringify(this.api.getDataOtp);
+        // console.warn(body);
       })     
   }
   addData() {
     this.api.addData(this.person)
       .subscribe(data => {
-        console.warn(data)
-        // this.refreshData();  
+        console.warn(data); 
       })      
-      // console.warn(this.registerForm.value);
       this.registerForm.reset();
       this.isShown = !this.isShown;
       this.show = !this.show;
   }
-  // onClick(){
-  //   console.warn(this.registerForm.value);
-  //   this.registerForm.reset();
-  // }
-  // submitForm() {
-  //   var formData: any = new FormData();
-  //   formData.append("fname", this.registerForm.get('fname').value);
-  //   formData.append("email", this.registerForm.get('email').value);
-  //   formData.append("password", this.registerForm.get('password').value);
-  //   this.httpClient.post<any>('http://imginfotech.in/propira/api/registration', formData).subscribe(
-  //     (res) => console.log(res),
-  //     (err) => console.log(err)
-  //   );
-  // }
-
   submit(){}
-
-  // getDataOtp() {
-  //   this.api.getDataOtp()
-  //     .subscribe(data => {
-  //       console.warn(data)
-  //       this.people=data;
-  //     })         
-      
-  // }
-  onKey(event: any) {
-    this.values += event.target.value ;
-    // JSON.stringify(this.values);
-  }
-
   onClick() {
-    if (this.values != JSON.stringify(this.api.getDataOtp)) {
+    this.api.onClick(this.person)
+    .subscribe(data => {
+      console.warn(data);
+      // this.refreshData();  
+    })      
+    if (this.OTP != this.otp) {
       alert('Incorrect OTP');
     }
     else {
       alert('Verification successful! Please login.');
     }
+}
+onOtpChange(otp) {
+  this.otp = otp;
 }
 }

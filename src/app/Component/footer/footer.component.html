@@ -131,26 +131,40 @@
                         </div>
                         <div class="col-lg-6 col-xl-6">
                             <div class="login_form">
-                                <form action="http://findhouse.bookingcore.org/login" class="bravo-form-login" method="POST">
+                                <form action="http://findhouse.bookingcore.org/login" class="bravo-form-login" method="POST" novalidate [formGroup]="loginForm">
                                     <input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> 
                                     <div class="heading">
                                         <h4>Login</h4>
                                     </div>
                                     <div class="input-group mb-2 mr-sm-2">
-                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" name="email" autocomplete="off" placeholder="Email">
+                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" name="email" autocomplete="off" placeholder="Email" formControlName="email">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="flaticon-user"></i></div>
                                         </div>
-                                        <span class="invalid-feedback error error-email"></span>
+                                        <div class="alert alert-danger" *ngIf="isValid('email')">
+                                            <div *ngIf="loginForm.controls['email'].errors?.required">
+                                               Email is required.
+                                            </div>
+                                            <div *ngIf="loginForm.controls['email'].errors?.pattern">
+                                               Invalid format.
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="input-group form-group">
-                                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" autocomplete="off" placeholder="Password">
+                                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" autocomplete="off" placeholder="Password" formControlName="password">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 <i class="flaticon-password"></i>
                                             </div>
                                         </div>
-                                        <span class="invalid-feedback error error-password"></span>
+                                        <div class="alert alert-danger" *ngIf="isValid('password')">
+                                            <div *ngIf="loginForm.controls['password'].errors?.required">
+                                                Password is required.
+                                             </div>
+                                             <div *ngIf="loginForm.controls['password'].errors?.minlength">
+                                                Minimum 6 characters are required.
+                                             </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="custom-control custom-checkbox">
@@ -191,48 +205,135 @@
                         </div>
                         <div class="col-lg-6 col-xl-6">
                             <div class="sign_up_form">
+                                <form action="#" class="form bravo-form-register" method="post" 
+                                action="http://imginfotech.in/propira/api/registration"
+                                [formGroup]="registerForm" 
+                                *ngIf ="isShown"
+                                novalidate (ngSubmit)="submitForm()">
                                 <div class="heading">
                                     <h4>Register</h4>
                                 </div>
-                                <form action="#" class="form bravo-form-register" method="post">
                                     <input type="hidden" name="_token" value="BKwZDIG2QxDPQMqih3ne0dxWY1ewUG1PPWFVklqX"> 
                                     <div class="form-group input-group">
-                                        <input type="text" class="form-control" name="first_name" autocomplete="off" placeholder="First Name">
+                                        <input type="fname" class="form-control" name="first_name" autocomplete="off" placeholder="First Name"
+                                        class="form-control" formControlName="fname" [(ngModel)]="person.name" >
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="flaticon-user"></i></div>
                                         </div>
-                                        <span class="invalid-feedback error error-first_name"></span>
+                                        <div class="alert alert-danger" *ngIf="isValidInput('fname')">
+                                            <div *ngIf="registerForm.controls['fname'].errors?.required">
+                                                First Name is required.
+                                            </div>
+                                            <div *ngIf="registerForm.controls['fname'].errors?.minlength">
+                                                At least 3 charcter is required.
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group input-group">
-                                        <input type="text" class="form-control" name="last_name" autocomplete="off" placeholder="Last Name">
+                                        <input type="lname" class="form-control" name="last_name" autocomplete="off" 
+                                        placeholder="Last Name" class="form-control" formControlName="lname">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="flaticon-user"></i></div>
+                                        </div><div class="alert alert-danger" *ngIf="isValidInput('lname')">
+                                            <div *ngIf="registerForm.controls['lname'].errors?.required">
+                                                Last Name is required.
+                                            </div>
+                                            <div *ngIf="registerForm.controls['lname'].errors?.minlength">
+                                                At least 3 charcter is required.
+                                            </div>
                                         </div>
-                                        <span class="invalid-feedback error error-last_name"></span>
                                     </div>
                                     <div class="form-group input-group">
-                                        <input type="email" class="form-control" name="email" autocomplete="off" placeholder="Email address">
+                                        <input type="email" class="form-control" name="email" autocomplete="off" placeholder="Email address"
+                                        class="form-control" formControlName="email" [(ngModel)]="person.email">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="fa fa-envelope-o"></i></div>
                                         </div>
-                                        <span class="invalid-feedback error error-email"></span>
+                                        <div class="alert alert-danger" *ngIf="isValidInput('email')">
+                                            <div *ngIf="registerForm.controls['email'].errors?.required">
+                                                Email is required.
+                                            </div>
+                                            <div *ngIf="registerForm.controls['email'].errors?.pattern">
+                                                Invalid format.
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group input-group">
-                                        <input type="password" class="form-control" id="exampleInputPassword2" name="password" autocomplete="off" placeholder="Password">
+                                        <input type="mobile" class="form-control" name="mobile" autocomplete="off" placeholder="Mobile number" 
+                                        formControlName="mobile"
+                                        [(ngModel)]="person.mobile"
+                                        #mobile>
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="flaticon-mobile"></i></div>
+                                        </div>
+                                        <div class="alert alert-danger" *ngIf="isValidInput('mobile')">
+                                            <div *ngIf="registerForm.controls['mobile'].errors?.required">
+                                                Mobile number is required.
+                                            </div>
+                                    
+                                            <div *ngIf="registerForm.controls['mobile'].errors?.pattern">
+                                                Letters are not allowed.
+                                            </div>
+                                            <div *ngIf="registerForm.controls['mobile'].errors?.minlength">
+                                                Must contain 10 digits.
+                                            </div>
+                                            <div *ngIf="registerForm.controls['mobile'].errors?.maxlength">
+                                                Must Contain 10 digits.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group input-group">
+                                        <input type="password" class="form-control" id="exampleInputPassword2" name="password" autocomplete="off" placeholder="Password"
+                                        class="form-control" formControlName="password" [(ngModel)]="person.password" >
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="flaticon-password"></i></div>
                                         </div>
-                                        <span class="invalid-feedback error error-password"></span>
+                                        <div class="alert alert-danger" *ngIf="isValidInput('password')">
+                                            <div *ngIf="registerForm.controls['password'].errors?.required">
+                                                Password is required.
+                                            </div>
+                                            <div *ngIf="registerForm.controls['password'].errors?.minlength">
+                                                Minimum 6 characters are required.
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="term" id="exampleCheck2">
+                                        <input type="checkbox" class="custom-control-input" name="term" id="exampleCheck2" formControlName="checkbox">
                                         <label class="custom-control-label" for="exampleCheck2">I have read and accept the Terms and Privacy Policy?</label>
                                     </div>
-                                    <div class="error message-error invalid-feedback"></div>
-                                        <button type="submit" class="btn btn-log btn-block btn-thm">Sign Up</button>
+                                    <div class="alert alert-danger" *ngIf="isValidInput('checkbox')">
+                                        <div *ngIf="registerForm.controls['checkbox'].errors?.required">
+                                            Plaese Check.
+                                        </div>
+                                    </div>
+                                        <button type="submit" class="btn btn-log btn-block btn-thm" (click)="addData()" [disabled]="!registerForm.valid">Sign Up</button>
                                         <p class="text-center">Already have an account?
                                             <a class="text-thm" href="javascript:void(0)" data-target="#login" data-toggle="modal">Log In</a>
                                         </p>
+                                </form>
+                                <form action=""  method="POST" novalidate *ngIf="show">
+                                    <div id="wrapper" class="col-md-12">
+                                        <div id="dialog">
+                                            <h4 class="text-center"><b>Verify</b></h4>
+                                            <label class="text-center">OTP has been sent to your mobile {{person.mobile}}, please enter same here to verify.</label>
+                                            <div class="row" style="margin-left: 30px;">
+                                                <div class="form-group">
+                                                    <ng-otp-input #ngOtpInput [config]="config"
+                                                    (onInputChange)="onOtpChange($event)" ></ng-otp-input>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-left: 120px;">
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary" (click)="onClick()">Submit</button>
+                                                </div>
+                                            </div>
+                                            <span *ngIf="otp" class="o-t-p">Entered otp :-{{otp}}</span>
+                                            <div>
+                                                Didn't receive the code?<br/>
+                                                <a href="#">Send code again</a><br />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>

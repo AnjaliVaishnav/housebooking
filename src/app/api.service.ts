@@ -11,7 +11,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class ApiService {
 
    url: string = "http://imginfotech.in/propira/api/";
-   otpUrl = "http://imginfotech.in/propira/api/registration/sendOtp";
+   otpUrl = "http://imginfotech.in/propira/api/registration/";
   // log: any;
   // OTP: number;
   
@@ -29,8 +29,8 @@ export class ApiService {
       return this.http.get<Data[]>(this.url + 'registration')
     }
     // getDataOtp(): Observable<Data[]> {
-    //   console.log('getDataOtp '+ this.otpUrl + 'sendOtp')
-    //   return this.http.get<Data[]>(this.otpUrl + 'sendOtp')
+    //   console.log('getDataOtp '+ this.otpUrl + 'VerifyOtp')
+    //   return this.http.get<Data[]>(this.otpUrl + 'verifyOtp')
     // }
     getDataOtp(OTP: any): Observable<Data[]> {
      const url = `${this.otpUrl}/${OTP}`;
@@ -39,12 +39,17 @@ export class ApiService {
     // catchError(this.handleError<Data[]>(`getHero id=${OTP}`))
   );
 }
-
     addData(person:Data): Observable<any> {
       const headers = { 'content-type': 'application/json'}  
       const body=JSON.stringify(person);
       console.log(body)
       return this.http.post(this.url + 'registration', body,{'headers':headers})
+    }
+    onClick(person:Data): Observable<any> {
+      const headers = { 'content-type': 'application/json'}  
+      const body=JSON.stringify(person);
+      console.log(body)
+      return this.http.post(this.otpUrl + 'verifyOtp', body,{'headers':headers})
     }
 }
 

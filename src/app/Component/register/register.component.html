@@ -1,5 +1,4 @@
 <app-header></app-header>
-<body>
     <div class="container">
         <div class="row justify-content-center bravo-login-form-page bravo-login-page">
             <div class="col-md-5">
@@ -129,42 +128,71 @@
                             <a href="#" data-target="#login" data-toggle="modal">Log In</a>
                         </div>
                     </form>
-                    <form action=""  method="POST" novalidate *ngIf="show" #otpVerify>
+                    <form action=""  method="POST" novalidate *ngIf="show">
                         <div id="wrapper" class="col-md-12">
+                            <div id="dialog">
+                                <h4 class="text-center"><b>Verify</b></h4>
+                                <label class="text-center">OTP has been sent to your mobile {{person.mobile}}, please enter same here to verify.</label>
+                                <div class="row" style="margin-left: 50px;">
+                                    <div class="form-group">
+                                        <ng-otp-input #ngOtpInput [config]="config"
+                                        (onInputChange)="onOtpChange($event)" ></ng-otp-input>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-left: 170px;">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary" (click)="onClick()">Submit</button>
+                                    </div>
+                                </div>
+                                <span *ngIf="otp" class="o-t-p">Entered otp :-{{otp}}</span>
+                                <div>
+                                    Didn't receive the code?<br/>
+                                    <a href="#">Send code again</a><br />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                        <!-- <div id="wrapper" class="col-md-12">
                             <div id="dialog">
                               <h4 class="text-center"><b>Verify</b></h4>
                               <label class="text-center">OTP has been sent to your mobile {{person.mobile}}, please enter same here to verify.</label>
                               <div class="row" style="margin-left: 50px;">
                                 <div class="form-group">
-                                    <input type="text" 
+                                    <input type="OTP" 
                                     class="form-control"
                                     formContorlName="otp"
+                                    [(ngModel)]="person.OTP"
                                     maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)" />
                                    </div>
                                    <div class="form-group">
-                                    <input type="text"
+                                    <input type="OTP"
                                     class="form-control"
-                                    formContorlName="otp1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)" />
+                                    formContorlName="otp1"
+                                    [(ngModel)]="person.OTP" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)" />
                                    </div>
                                    <div class="form-group">
-                                    <input type="text" 
+                                    <input type="OTP" 
                                     class="form-control"
-                                    formContorlName="otp2"maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
+                                    formContorlName="otp2"
+                                    [(ngModel)]="person.OTP" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
                                    </div>
                                    <div class="form-group">
-                                    <input type="text" 
+                                    <input type="OTP" 
                                     class="form-control"
-                                    formContorlName="otp3"maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
+                                    formContorlName="otp3"
+                                    [(ngModel)]="person.OTP" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
                                    </div>
                                    <div class="form-group">
-                                    <input type="text" 
+                                    <input type="OTP" 
                                     class="form-control"
-                                    formContorlName="otp4"maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
+                                    formContorlName="otp4"
+                                    [(ngModel)]="person.OTP" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
                                    </div>
                                    <div class="form-group">
-                                    <input type="text"
+                                    <input type="OTP"
                                     class="form-control"
-                                    formContorlName="otp5" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
+                                    formContorlName="otp5"
+                                    [(ngModel)]="person.OTP" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" (keyup)="onKey($event)" (ngModelChange)="onChange($event)"/>
                                    </div>
                                 </div>
                                 <div class="row" style="margin-left: 170px;">
@@ -177,58 +205,22 @@
                                      Didn't receive the code?<br/>
                                     <a href="#">Send code again</a><br />
                                 </div>
-                            </div>  
-                        </div>
-                    </form>   
+                            </div>   -->
+                        <!-- </div> -->  
                 </div>
             </div>
         </div>    
     </div>
-    <script>
-    $(function() {
-        'use strict';
-        var body = $('body');
-      
-        function goToNextInput(e) {
-          var key = e.which,
-            t = $(e.target),
-            sib = t.next('input');
-      
-          if (key != 9 && (key < 48 || key > 57)) {
-            e.preventDefault();
-            return false;
-          }
-      
-          if (key === 9) {
-            return true;
-          }
-      
-          if (!sib || !sib.length) {
-            sib = body.find('input').eq(0);
-          }
-          sib.select().focus();
-        }
-      
-        function onKeyDown(e) {
-          var key = e.which;
-      
-          if (key === 9 || (key >= 48 && key <= 57)) {
-            return true;
-          }
-      
-          e.preventDefault();
-          return false;
-        }
-        
-        function onFocus(e) {
-          $(e.target).select();
-        }
-      
-        body.on('keyup', 'input', goToNextInput);
-        body.on('keydown', 'input', onKeyDown);
-        body.on('click', 'input', onFocus);
-      
-      })
-      </script>
-    </body>   
+      <!-- <div class="container-fluid">
+        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+          <h3>Enter your OTP </h3>
+          <div class="row">
+              <div class="form-group col-sm-2" *ngFor="let input of formInput;  index as i">
+                  <input #formRow type="text" formControlName="{{input}}" class="form-control" maxlength="1" (keyup)="keyUpEvent($event, i)">
+                </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </body>    -->
 <app-footer></app-footer>

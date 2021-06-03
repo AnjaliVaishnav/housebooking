@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './Component/header/header.component';
 import {FooterComponent } from './Component/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgOtpInputModule } from  'ng-otp-input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     // OwlModule,
     BrowserAnimationsModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    NgOtpInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

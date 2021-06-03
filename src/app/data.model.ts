@@ -1,3 +1,5 @@
+import { $ } from "protractor";
+
 export class Data {
     name: string;
     email: string;
@@ -7,5 +9,10 @@ export class Data {
     is_registration: string ="0";
     user_type:string="1";
     type: string="Web";
-    OTP: any;
+    OTP: string = "123456";
 }
+// export class verifyData {
+//     type: string = "web";
+//     otp: string = "123456";
+//     auth_token: string;
+// }
