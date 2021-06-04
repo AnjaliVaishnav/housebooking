@@ -21,6 +21,8 @@ import { HeaderComponent } from './Component/header/header.component';
 import {FooterComponent } from './Component/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgOtpInputModule } from  'ng-otp-input';
+import { CountdownModule } from '@ciri/ngx-countdown'
+// import { CountdownModule } from '@ciri/ngx-countdown';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,9 @@ import { NgOtpInputModule } from  'ng-otp-input';
     BrowserAnimationsModule,
     CarouselModule,
     HttpClientModule,
-    NgOtpInputModule
+    NgOtpInputModule,
+    CountdownModule
+    // CountdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

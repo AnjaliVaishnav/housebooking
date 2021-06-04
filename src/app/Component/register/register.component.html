@@ -144,10 +144,11 @@
                                         <button type="submit" class="btn btn-primary" (click)="onClick()">Submit</button>
                                     </div>
                                 </div>
-                                <span *ngIf="otp" class="o-t-p">Entered otp :-{{otp}}</span>
-                                <div>
+                                <span *ngIf="otp" class="o-t-p"><b>Entered otp :-</b>{{otp}}</span><br>
+                                <b>Time Left :-  </b><ngx-countdown [time]="60000" format="ss" (finish)="onFinish()"></ngx-countdown>sec
+                                <div *ngIf = "resend">
                                     Didn't receive the code?<br/>
-                                    <a href="#">Send code again</a><br />
+                                    <button><a routerLink="/register">Resend code</a><br /></button>
                                 </div>
                             </div>
                         </div>

@@ -264,7 +264,7 @@
                                         [(ngModel)]="person.mobile"
                                         #mobile>
                                         <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="flaticon-mobile"></i></div>
+                                            <div class="input-group-text"><i class="flaticon-phone"></i></div>
                                         </div>
                                         <div class="alert alert-danger" *ngIf="isValidInput('mobile')">
                                             <div *ngIf="registerForm.controls['mobile'].errors?.required">
@@ -328,7 +328,8 @@
                                                 </div>
                                             </div>
                                             <span *ngIf="otp" class="o-t-p">Entered otp :-{{otp}}</span>
-                                            <div>
+                                            <b>Time Left :-  </b><ngx-countdown [time]="60000" format="ss"></ngx-countdown>sec
+                                            <div *ngIf="resend">
                                                 Didn't receive the code?<br/>
                                                 <a href="#">Send code again</a><br />
                                             </div>

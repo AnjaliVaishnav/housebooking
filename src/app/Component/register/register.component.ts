@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, ViewChildren, ElementRef, ViewChild  } from '@angular/core'; 
 import {FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { Observable, interval} from 'rxjs';
 import { ApiService} from 'src/app/api.service';
 import { Data } from 'src/app/data.model';
 
@@ -18,13 +19,14 @@ export class RegisterComponent{
   people:Data[];
   person = new Data();
   isShown: boolean = true ;
-  show: boolean = true;
+  show: boolean = false;
+  resend: boolean= false;
   values = "";
   otp: string;
   OTP = "";
   showOtpComponent = true;
   @ViewChild('ngOtpInput', { static: false}) ngOtpInput: any;
-    constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient) { 
+    constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient, private elementRef: ElementRef) { 
     this.registerForm = this.fb.group({
       fname: ['', [Validators.required, Validators.minLength(3)]],
       lname: ['', [Validators.required, Validators.minLength(3)]],
@@ -90,5 +92,8 @@ export class RegisterComponent{
 }
 onOtpChange(otp) {
   this.otp = otp;
+}
+onFinish(){
+  this.resend = !this.resend;
 }
 }

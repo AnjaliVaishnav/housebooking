@@ -20,6 +20,7 @@ export class FooterComponent{
   person = new Data();
   isShown: boolean = true;
   show: boolean = false;
+  resend: boolean = false;
   values = "";
   otp: string;
   OTP = "";
@@ -100,6 +101,9 @@ export class FooterComponent{
 }
 onOtpChange(otp) {
   this.otp = otp;
+}
+onFinish(){
+  this.resend =! this.resend;
 }
 
 }
