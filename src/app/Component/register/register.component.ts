@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Component, ViewChildren, ElementRef, ViewChild  } from '@angular/core'; 
 import {FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Observable, interval} from 'rxjs';
@@ -24,6 +24,7 @@ export class RegisterComponent{
   values = "";
   otp: string;
   OTP = "";
+  auth_token = "";
   showOtpComponent = true;
   @ViewChild('ngOtpInput', { static: false}) ngOtpInput: any;
     constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient, private elementRef: ElementRef) { 
@@ -67,29 +68,74 @@ export class RegisterComponent{
         // console.warn(body);
       })     
   }
-  addData() {
-    this.api.addData(this.person)
-      .subscribe(data => {
-        console.warn(data); 
-      })      
-      this.registerForm.reset();
-      this.isShown = !this.isShown;
-      this.show = !this.show;
+  // addData() {
+  //   this.api.addData(this.person)
+  //     .subscribe(data => {
+  //       console.warn(data); 
+  //     })      
+  //     this.registerForm.reset();
+  //     this.isShown = !this.isShown;
+  //     this.show = !this.show;
+  // }
+  submitForm() {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'text/plain; charset=utf-8', 'Accept': 'application/json' })
+      }; 
+     let getDataToSubmit = {
+      "name":this.registerForm.get('fname').value,
+      "email":this.registerForm.get('email').value,
+      "password":this.registerForm.get('password').value,
+      "phone_code":"91",
+      "mobile":this.registerForm.get('mobile').value,
+      "user_type":"1",
+      "type":"Web",
+      "is_registration":"0"
+    }
+    this.httpClient.post<any>('http://imginfotech.in/propira/api/registration', getDataToSubmit, httpOptions).subscribe(data => {
+		console.log("data recieved",data[0].error);
+		if(data[0].error==0){
+			this.auth_token = data[0].auth_token;
+			this.httpClient.post<any>('http://imginfotech.in/propira/api/sendOtp', {type:"Web",auth_token:data[0].auth_token},httpOptions).subscribe(data => {
+				this.registerForm.reset();
+				this.isShown = !this.isShown;
+				this.show = !this.show;
+			});
+		}
+        console.log(data);
+    })
   }
-  submit(){}
-  onClick() {
-    this.api.onClick(this.person)
-    .subscribe(data => {
-      console.warn(data);
-      // this.refreshData();  
-    })      
-    if (this.OTP != this.otp) {
-      alert('Incorrect OTP');
-    }
-    else {
-      alert('Verification successful! Please login.');
-    }
-}
+  verifyOtp(){
+	  const httpOptions = {
+		headers: new HttpHeaders({ 'Content-Type': 'text/plain; charset=utf-8', 'Accept': 'application/json' })
+	  }; 
+	  console.log("otp",this.otp);
+	  var otp= this.otp;
+	  var getDataToSubmit = {
+		  "type":"Web",
+		  "otp":otp,
+		  "auth_token":this.auth_token
+	  }
+	  this.httpClient.post<any>('http://imginfotech.in/propira/api/verifyOtp', getDataToSubmit, httpOptions).subscribe(data => {
+		  console.log("data",data[0].error);
+      if(data[0].error!=0){
+        alert("Incorrect OTP! Please try again.")
+      }
+      console.log("data", data);
+	  });
+  }
+//   onClick() {
+//     this.api.onClick(this.person)
+//     .subscribe(data => {
+//       console.warn(data);
+//       // this.refreshData();  
+//     })      
+//     if (this.OTP != this.otp) {
+//       alert('Incorrect OTP');
+//     }
+//     else {
+//       alert('Verification successful! Please login.');
+//     }
+// }
 onOtpChange(otp) {
   this.otp = otp;
 }
