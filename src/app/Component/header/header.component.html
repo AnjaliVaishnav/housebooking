@@ -84,10 +84,12 @@
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="javascript:void(0)" class="btn flaticon-user"> 
-                                        <span class="dn-lg" data-toggle="modal" data-target="#login">Login/</span> 
-                                        <span data-toggle="modal" data-target="#register">Register</span> 
+                                        <span class="dn-lg" data-toggle="modal" data-target="#login" *ngIf="api.loginStatus == false">Login/</span> 
+                                        <span data-toggle="modal" data-target="#register" *ngIf="api.loginStatus == false">Register</span> 
+                                        <span class="loginmenu joinusmenu" (click)="logout()" *ngIf="api.loginStatus == true">Logout</span>
                                     </a>
                                 </li>
+                                
                                 <li class="list-inline-item add_listing">
                                     <a routerLInk="/login"><span class="flaticon-plus"></span>
                                         <span class="dn-lg"> Create Listing</span>

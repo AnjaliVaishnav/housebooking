@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
-import { Component, ViewChildren, ElementRef, ViewChild  } from '@angular/core'; 
+import { Component, ViewChildren, ElementRef, ViewChild, Output, EventEmitter  } from '@angular/core'; 
 import {FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable, interval} from 'rxjs';
 import { ApiService} from 'src/app/api.service';
 import { Data } from 'src/app/data.model';
@@ -10,6 +11,7 @@ import { Data } from 'src/app/data.model';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent{
   registerForm : FormGroup;
   formBuilder: any;
@@ -21,13 +23,17 @@ export class RegisterComponent{
   isShown: boolean = true ;
   show: boolean = false;
   resend: boolean= false;
+  isAuth: boolean = true;
   values = "";
   otp: string;
   OTP = "";
   auth_token = "";
   showOtpComponent = true;
+  image : any;
+  user: any;
+  @Output() tableDataValues=new EventEmitter<string>();
   @ViewChild('ngOtpInput', { static: false}) ngOtpInput: any;
-    constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient, private elementRef: ElementRef) { 
+    constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient, private elementRef: ElementRef,public router: Router) { 
     this.registerForm = this.fb.group({
       fname: ['', [Validators.required, Validators.minLength(3)]],
       lname: ['', [Validators.required, Validators.minLength(3)]],
@@ -96,7 +102,7 @@ export class RegisterComponent{
 		if(data[0].error==0){
 			this.auth_token = data[0].auth_token;
 			this.httpClient.post<any>('http://imginfotech.in/propira/api/sendOtp', {type:"Web",auth_token:data[0].auth_token},httpOptions).subscribe(data => {
-				this.registerForm.reset();
+        this.registerForm.reset();
 				this.isShown = !this.isShown;
 				this.show = !this.show;
 			});
@@ -115,27 +121,27 @@ export class RegisterComponent{
 		  "otp":otp,
 		  "auth_token":this.auth_token
 	  }
-	  this.httpClient.post<any>('http://imginfotech.in/propira/api/verifyOtp', getDataToSubmit, httpOptions).subscribe(data => {
-		  console.log("data",data[0].error);
+	  this.httpClient.post<any>('http://imginfotech.in/propira/api/verifyOtp', getDataToSubmit, httpOptions).subscribe(data => { 
+    console.log(this.user);
+    console.log("data",data[0].error);
       if(data[0].error!=0){
         alert("Incorrect OTP! Please try again.")
       }
+      else{
+        this.router.navigate(['/index'])
+        this.api.setLoginStatus(true);
+        // this.image = data[0].image;
+        // this.fname = data[0].name;
+        // console.log (this.image);
+        // console.log (data[0].name);
+        // console.log(this.api.loginStatus)
+        this.tableDataValues.emit(this.fname);
+        // this.isAuth = !this.isAuth;
+      }    
       console.log("data", data);
 	  });
   }
-//   onClick() {
-//     this.api.onClick(this.person)
-//     .subscribe(data => {
-//       console.warn(data);
-//       // this.refreshData();  
-//     })      
-//     if (this.OTP != this.otp) {
-//       alert('Incorrect OTP');
-//     }
-//     else {
-//       alert('Verification successful! Please login.');
-//     }
-// }
+
 onOtpChange(otp) {
   this.otp = otp;
 }

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Data } from 'src/app/data.model';
 import { catchError, map, tap } from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,6 +13,7 @@ export class ApiService {
 
    url: string = "http://imginfotech.in/propira/api/";
    otpUrl = "http://imginfotech.in/propira/api/registration/";
+   public loginStatus = false;
   // log: any;
   // OTP: number;
   
@@ -51,6 +53,17 @@ export class ApiService {
       console.log(body)
       return this.http.post(this.otpUrl + 'verifyOtp', body,{'headers':headers})
     }
+
+  setLoginStatus(status: boolean) {
+    this.loginStatus = status;
+  }
+    isAuthenticated() {
+      // return this.http.get(this.url + '/is-logged-in')
+      //   .pipe(
+      //     map((response) => { return response })
+      //   );
+          
+  }
 }
 
 
