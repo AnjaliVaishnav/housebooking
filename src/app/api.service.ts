@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Data } from 'src/app/data.model';
 import { catchError, map, tap } from 'rxjs/operators';
-
 
 @Injectable({
   providedIn: 'root'
@@ -14,26 +13,32 @@ export class ApiService {
    url: string = "http://imginfotech.in/propira/api/";
    otpUrl = "http://imginfotech.in/propira/api/registration/";
    public loginStatus = false;
-  // log: any;
-  // OTP: number;
-  
+   public userInfo = new Subject<string>(); 
+   userInfo$ = this.userInfo.asObservable();
+   private currentUserNameStore = new BehaviorSubject<string>("");
+
+  // Make UserName store Observable
+  public currentUserName$ = this.currentUserNameStore.asObservable();
+
+  // Setter to update UserName
+  setCurrentUserName(userName: string) {
+    this.currentUserNameStore.next(userName);
+  }
+ 
+   publishData(data: any) {
+     this.userInfo.next(data);
+   }  
+
   constructor(private http: HttpClient) {}
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }  
-    // getData() {
-    //   return this.http.get(url);
-    // }
+  } 
     getData(): Observable<Data[]> {
       console.log('getData '+this.url + 'registration')
       return this.http.get<Data[]>(this.url + 'registration')
     }
-    // getDataOtp(): Observable<Data[]> {
-    //   console.log('getDataOtp '+ this.otpUrl + 'VerifyOtp')
-    //   return this.http.get<Data[]>(this.otpUrl + 'verifyOtp')
-    // }
     getDataOtp(OTP: any): Observable<Data[]> {
      const url = `${this.otpUrl}/${OTP}`;
      return this.http.get<Data[]>(this.otpUrl).pipe(
@@ -56,13 +61,6 @@ export class ApiService {
 
   setLoginStatus(status: boolean) {
     this.loginStatus = status;
-  }
-    isAuthenticated() {
-      // return this.http.get(this.url + '/is-logged-in')
-      //   .pipe(
-      //     map((response) => { return response })
-      //   );
-          
   }
 }
 

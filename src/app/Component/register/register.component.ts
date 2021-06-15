@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Observable, interval} from 'rxjs';
 import { ApiService} from 'src/app/api.service';
 import { Data } from 'src/app/data.model';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-register',
@@ -30,8 +31,9 @@ export class RegisterComponent{
   auth_token = "";
   showOtpComponent = true;
   image : any;
+  userName: any;
   user: any;
-  @Output() tableDataValues=new EventEmitter<string>();
+  @Output() login :EventEmitter<string>= new EventEmitter();
   @ViewChild('ngOtpInput', { static: false}) ngOtpInput: any;
     constructor(private fb : FormBuilder, private api: ApiService, private httpClient: HttpClient, private elementRef: ElementRef,public router: Router) { 
     this.registerForm = this.fb.group({
@@ -68,7 +70,6 @@ export class RegisterComponent{
       })      
       this.api.getDataOtp(this.otp)
       .subscribe(data => {
-        console.warn(data)
         this.people=data;
         // const body = JSON.stringify(this.api.getDataOtp);
         // console.warn(body);
@@ -122,26 +123,27 @@ export class RegisterComponent{
 		  "auth_token":this.auth_token
 	  }
 	  this.httpClient.post<any>('http://imginfotech.in/propira/api/verifyOtp', getDataToSubmit, httpOptions).subscribe(data => { 
-    console.log(this.user);
     console.log("data",data[0].error);
+    this.userName = data[0].name;
+    this.api.setCurrentUserName(this.userName);
       if(data[0].error!=0){
         alert("Incorrect OTP! Please try again.")
       }
       else{
+        let user = {
+          "name": data[0].name,
+          "image":data[0].image
+        }
         this.router.navigate(['/index'])
         this.api.setLoginStatus(true);
-        // this.image = data[0].image;
-        // this.fname = data[0].name;
-        // console.log (this.image);
-        // console.log (data[0].name);
-        // console.log(this.api.loginStatus)
-        this.tableDataValues.emit(this.fname);
-        // this.isAuth = !this.isAuth;
+        this.api.publishData(user);
+        
+        // console.log ("image:",data[0].image);
+        // console.log ("name:",data[0].name);
       }    
       console.log("data", data);
 	  });
   }
-
 onOtpChange(otp) {
   this.otp = otp;
 }
